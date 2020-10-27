@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import Accordion from './Accordion';
-import SocialFollow from  './SocialFollow';
 
 export default class Footer extends Component {
     render() {
     return (
       
-        <div className="footer pb-1">
+        <div className="footer">
             <div class="container pt-5 pb-2">
-              <div className="d-md-none"><Accordion className="col-12"/></div>
                     <div className="bbn">
                     <div className="row">
                         <div className="col-md-2">
@@ -50,10 +47,8 @@ export default class Footer extends Component {
                     <div className="row align-items-center mt-md-4">
                         <div className="col-md-6">
                             <p className="mt-4 small mb-md-0 text-center text-md-left">All Rights Reserved.</p>
-                            <p className="small mb-md-0 text-center text-md-left">© 2020  <a href="#" target="_blank"> Etoile Beauty Nigeria</a></p>
+                            <p className="small mb-md-0 text-center text-md-left">© 2020  <a href="#" target="_blank">Cosmetic Formulator Depot</a></p>
                             <p className="small text-center text-md-left">Design by Blackgene Development</p>
-                        </div>
-                        <div className="col-md-6"><img className="img-responsive ml-md-auto" src="../img/shop/payment-methods.png" alt="Payment methods"/>
                         </div>
                     </div>
                 </div>

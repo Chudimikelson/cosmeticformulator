@@ -263,7 +263,7 @@ button:focus {
 
 
 .fab, .fas {
-  color: palevioletred;
+  color: lightgreen;
 }
 
 #menuBar {
@@ -276,7 +276,9 @@ button:focus {
 .fa-shopping-cart {
   font-size: 1.2rem;
 }
-
+.fa-bars {
+  font-size: 1.8rem;
+}
 .one .fab {
   margin: 0 .2rem;
   height: 2rem;

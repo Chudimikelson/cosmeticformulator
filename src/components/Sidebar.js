@@ -21,7 +21,7 @@ export default class Sidebar extends Component {
     return (
       <div>
         <button id="menuBar" onClick={this.toggle} >
-        <span id='menubaricon' ><i className="fas fa-bars"></i></span>
+        <span id='menubaricon' ><i className="fas fa-bars my-2"></i></span>
         </button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Etoile Beauty</ModalHeader>

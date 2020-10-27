@@ -23,8 +23,8 @@ class App extends Component {
       <React.Fragment>
               <Helmet>
               <meta charSet="utf-8" />
-        <title>Etoile Beauty Nigeria | Lightening Black Soap, Natural Body Brightening Lotion, Face Cream, Scrubs, Masks, Oils and Serums... </title>
-        <meta name="description" content="Etoile Beauty Nigeria is your best bet for buying organic and natural skin care products, lightening black soap, brightening lotions, creams and oils for a natural glowing face, body and all-round beauty"
+        <title>Cosmetic Formulator Depot </title>
+        <meta name="description" content="description"
         />
         </Helmet>
         <Navbar />

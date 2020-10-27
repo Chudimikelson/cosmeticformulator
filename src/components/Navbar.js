@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../logo.jpg';
+import logo from '../camden-grey-logo_2.png';
 import styled from 'styled-components';
 import Sidebar from './Sidebar';
 
@@ -9,22 +9,20 @@ export default class Navbar extends Component {
     return (
       <React.Fragment>
         <div className="bbn fixed"></div>
-        <NavWrapper className="d-flex justify-content-between p-3  fixed">
-          <div className="pl-0"><Sidebar/></div>
-          <div className="text-center ">
-            <Link to='/'>
-              <h1 className="mb-0">
-                <img className="mylogo"src={logo} alt="Etoile Beauty Nigeria"/>
-              </h1>
+        <NavWrapper className="container fixed">
+          <div className="row justify-content-between">
+            <Sidebar className="col-3"/>
+            <Link className="col-8" to='/'>
+              <img className="mylogo img-fluid"src={logo} alt="Etoile Beauty Nigeria"/>
             </Link>
           </div>
-          <div className="text-right pr-0">
-            <Link to="/checkout" className="ml-auto">
-              <button id="cartbtn">
-                <span>
-                  <i className="ml-1 fas fa-shopping-cart" />
-                </span>
-              </button>
+          <div className="d-flex justify-content-between">
+            <button className="btn">
+              <i className="fas fa-shopping-cart"/>
+              <span className="">N0.00</span>
+            </button>
+            <Link to="/checkout">
+              <button className="btn-primary">CHECKOUT</button>
             </Link>
           </div>
         </NavWrapper>
@@ -35,8 +33,9 @@ export default class Navbar extends Component {
 
 const NavWrapper = styled.nav`
 .mylogo  {
-  height: 2rem;
-  width: 9rem;
+  height: 3rem;
 }
-
+#cartbtn {
+  font-size: 3rem;
+}
 `
