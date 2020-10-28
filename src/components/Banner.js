@@ -5,7 +5,7 @@ import banner from '../photos/IMG-1.jpg';
 const Banner = () => {
   return (
     <Bannerstyle>
-    <section className="section paddit">
+    <section className="">
       <div className="swiper-container shop-home-slider">
         <div className="swiper-wrapper">
           <div className="swiper-slide">
