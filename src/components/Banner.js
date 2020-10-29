@@ -1,19 +1,15 @@
 import React from "react";
 import styled from 'styled-components';
-import banner from '../photos/IMG-1.jpg';
+import banner from '../CoconutButter_Desktop.jpg';
 
 const Banner = () => {
   return (
     <Bannerstyle>
-    <section className="">
+    <section className="container-fluid">
       <div className="swiper-container shop-home-slider">
         <div className="swiper-wrapper">
           <div className="swiper-slide">
-            <div className="container-fluid" style={{"background-color": "rgb(0, 145, 175)"}}>
-              <div className="row align-items-center">
-                <h1 className="text-contrast bold display-lg-4">Cosmetic Formulator </h1>
-              </div>
-            </div>
+            <img src={banner}/>
           </div>    
         </div>
       </div>
@@ -23,11 +19,9 @@ const Banner = () => {
 }
 
 const Bannerstyle = styled.div `
-
 img {
-  min-height: 200px;
-  width: auto;
-  border-radius: 50%;
+  max-height: 400px;
+  width: 100%;
 }
 .finess {
   position: relative;
