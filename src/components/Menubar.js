@@ -29,7 +29,7 @@ render() {
           <MDBDropdownItem>Something else here</MDBDropdownItem>
           <MDBDropdownItem>Something else here</MDBDropdownItem>
         </MDBDropdownMenu>
-      </MDBDropdown>
+      </MDBDropdown><hr/>
       <MDBDropdown>
         <MDBDropdownToggle caret color="default" size="sm">OILS</MDBDropdownToggle>
         <MDBDropdownMenu color="danger" className="dropdown dropright">
@@ -38,7 +38,7 @@ render() {
           <MDBDropdownItem>Something else here</MDBDropdownItem>
           <MDBDropdownItem>Something else here</MDBDropdownItem>
         </MDBDropdownMenu>
-      </MDBDropdown>
+      </MDBDropdown><hr/>
       <MDBDropdown>
         <MDBDropdownToggle caret color= "white" size="sm">BUTTERS</MDBDropdownToggle>
         <MDBDropdownMenu color="white">
@@ -47,9 +47,9 @@ render() {
           <MDBDropdownItem>Something else here</MDBDropdownItem>
           <MDBDropdownItem>Something else here</MDBDropdownItem>
         </MDBDropdownMenu>
-      </MDBDropdown>
+      </MDBDropdown> <hr/>
       <MDBDropdownToggle color="default" size="sm">OILS
-      </MDBDropdownToggle>
+      </MDBDropdownToggle> <hr/>
         <MDBDropdown>
           <MDBDropdownToggle color="default" caret size="sm">SOAPMAKING
           </MDBDropdownToggle>
@@ -58,7 +58,7 @@ render() {
             <MDBDropdownItem href="#!">Face</MDBDropdownItem>
             <MDBDropdownItem href="#!">Kids</MDBDropdownItem>
           </MDBDropdownMenu>
-        </MDBDropdown>
+        </MDBDropdown> <hr/>
         <MDBDropdown>
           <MDBDropdownToggle color="default" caret size="sm"><span className="px-1">BASES</span>
           </MDBDropdownToggle>
@@ -82,7 +82,7 @@ render() {
 export default NavbarPage;
 
 const NavWrapper = styled.nav`
-background: #72be44;
+background: #ffffff;
 font-color: #ffffff;
 .mylogo  {
   
@@ -90,5 +90,10 @@ font-color: #ffffff;
 }
 .navitem {
   font-size: 1rem;
+}
+hr {
+  transform: rotate(90deg);
+  width: 1rem;
+  background: green;
 }
 `
