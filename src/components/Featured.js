@@ -12,12 +12,12 @@ export default function Featured() {
       <section className="partners bg-light b-b">
         <div className="font-md text-center">Featured Products</div>
         <div className="swiper-container">
-          <div className="swiper-wrapper d-flex justify-content-center">
-            <div className="swiper-slide col-md-2 card shadow mx-2"><div className="card-body"><img src={lavenderbud} alt=""/></div></div>
-            <div className="swiper-slide col-md-2 card shadow mx-2"><div className="card-body"><img src={essOil} alt=""/></div></div>
-            <div className="swiper-slide col-md-2 card shadow mx-2"><div className="card-body"><img src={butterMilk} alt=""/></div></div>
-            <div className="swiper-slide col-md-2 card shadow mx-2"><div className="card-body"><img src={oliveOil} alt=""/></div></div>
-            <div className="swiper-slide col-md-2 card shadow mx-2"><div className="card-body"><img src={lavenderbud} alt=""/></div></div>
+          <div className="swiper-wrapper d-flex justify-content-center flex-wrap">
+            <div className="swiper-slide col-12 col-md-2 card shadow mx-2"><div className="card-body"><img src={lavenderbud} alt=""/></div></div>
+            <div className="swiper-slide col-12 col-md-2 card shadow mx-2"><div className="card-body"><img src={essOil} alt=""/></div></div>
+            <div className="swiper-slide col-12 col-md-2 card shadow mx-2"><div className="card-body"><img src={butterMilk} alt=""/></div></div>
+            <div className="swiper-slide col-12 col-md-2 card shadow mx-2"><div className="card-body"><img src={oliveOil} alt=""/></div></div>
+            <div className="swiper-slide col-12 col-md-2 card shadow mx-2"><div className="card-body"><img src={lavenderbud} alt=""/></div></div>
           </div>
         </div>
       </section>

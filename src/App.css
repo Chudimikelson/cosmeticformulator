@@ -326,34 +326,13 @@ button:focus {
   width: 200px;
   background-image: url('./photos/paystk.jpg');
 }
-@media screen and (max-width:769px) {
+@media screen and (max-width:420px) {
   .bbn {
     display:none;
   }  
-  .card-img-top {
-    height:21rem;
-  }
-  .myaccordion {
-    min-height: 0;  
-  }
-  
-  .myaccordion,
-  .myaccordion li {
-    flex-direction: column;
-  }
-  
-  
-  .myaccordion .myaccordion-heading {
-    transform: none;
-  }
-  
-  .myaccordion .myaccordion-title,
-  .myaccordion .myaccordion-content {
-    padding: 20px;
-  }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
   .myaccordion .myaccordion-heading {
     display: inline-block;
     white-space: nowrap;

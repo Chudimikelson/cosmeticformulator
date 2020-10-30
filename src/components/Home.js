@@ -7,7 +7,7 @@ import Featured from './Featured';
 export default function Home() {
   return (
       <React.Fragment>
-        <div><Menubar/></div>
+        <div className="bbn"><Menubar/></div>
           <Banner />
           <ShopByCategories/>         
           <Featured/>
