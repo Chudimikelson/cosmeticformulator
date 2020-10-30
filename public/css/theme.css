@@ -17901,8 +17901,10 @@ main {
     font-family: "Poppins", sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
-    -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+ opacity 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+ opacity 0.3s ease-in-out;
     text-decoration: none;
     letter-spacing: 1px;
     padding: 1rem; }
@@ -18977,13 +18979,11 @@ section,
 
 @media (min-width: 768px) {
   .partners img {
-    opacity: 0.5;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .partners img:hover {
-      opacity: 1;
       -webkit-transform: scale(1);
               transform: scale(1); } }
 

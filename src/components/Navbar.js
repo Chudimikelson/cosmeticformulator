@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../camden-grey-logo_2.png';
+import logo from '../cfd.png';
 import styled from 'styled-components';
 import Sidebar from './Sidebar';
 import { MDBNavbar, MDBBtn, MDBBtnGroup, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBDropdown,
@@ -44,7 +44,7 @@ export default class Navbar extends Component {
       </div>
     </MDBCol>
     <MDBNavbar className="text-right">
-           <MDBNavLink to="/checkout">
+           <MDBNavLink to="/checkout" style={{"color":"black"}}>
            <span className="font-xs"><i className="mr-2 fas fa-shopping-cart" />Cart Empty</span><br/>
            <span className="small">CHECKOUT</span>
           </MDBNavLink>
@@ -66,8 +66,8 @@ export default class Navbar extends Component {
 }
 
 const NavWrapper = styled.nav`
-.mylogo  {
-  height: 3rem;
+img  {
+  max-height: 112px;
 }
 #cartbtn {
   font-size: 3rem;

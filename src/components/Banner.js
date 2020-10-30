@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import banner from '../CoconutButter_Desktop.jpg';
+import banner from '../photos/banner-image.png';
 
 const Banner = () => {
   return (

@@ -11,7 +11,6 @@ import Modal from './components/Modal';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Helmet from 'react-helmet';
-import Academy from './components/Academy';
 import Diy from './components/Diy';
 import Bestsells from './components/Bestsells';
 import Collection from './components/Collection';
@@ -36,7 +35,6 @@ class App extends Component {
           <Route path="/collections" component={Collections}/>
           <Route path="/checkout" component={Checkout} />
           <Route exact path="/shop" component={ProductList}/>
-          <Route path="/Academy" component={Academy}/>
           <Route path="/DIY" component={Diy}/>
           <Route component={Default} />
         </Switch>
