@@ -3,6 +3,7 @@ import ShopByCategories from './ShopByCategories';
 import Banner from './Banner';
 import Menubar from './Menubar';
 import Featured from './Featured';
+import Testimonials from './Testimonials';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           <Banner />
           <ShopByCategories/>         
           <Featured/>
+          <Testimonials/>
       </React.Fragment> 
   )
 }

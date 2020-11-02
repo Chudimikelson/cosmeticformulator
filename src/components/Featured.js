@@ -10,7 +10,7 @@ export default function Featured() {
   return (
     <SectionCss>
       <section className="partners bg-light b-b">
-        <div className="font-md text-center">Featured Products</div>
+        <div className="font-md text-center u-dancing-script">Featured Products</div>
         <div className="swiper-container">
           <div className="swiper-wrapper d-flex justify-content-center flex-wrap">
             <div className="swiper-slide col-12 col-md-2 card shadow mx-2"><div className="card-body"><img src={lavenderbud} alt=""/></div></div>
