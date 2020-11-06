@@ -11,7 +11,7 @@ import Modal from './components/Modal';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Helmet from 'react-helmet';
-import Diy from './components/Diy';
+import Butters from './components/Butters';
 import Bestsells from './components/Bestsells';
 import Collection from './components/Collection';
 import Collections from './components/Collections';
@@ -34,8 +34,8 @@ class App extends Component {
           <Route path="/collection" component={Collection}/>
           <Route path="/collections" component={Collections}/>
           <Route path="/checkout" component={Checkout} />
-          <Route exact path="/shop" component={ProductList}/>
-          <Route path="/DIY" component={Diy}/>
+          <Route exact path="/OILS" component={ProductList}/>
+          <Route path="/BUTTERS" component={Butters}/>
           <Route component={Default} />
         </Switch>
         <Modal/>

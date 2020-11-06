@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import logo from '../logooo.png';
 import styled from 'styled-components';
-import { MDBNavbar, MDBBtn, MDBBtnGroup, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBDropdown,
-MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
+import { MDBNavbar, MDBDropdown,
+MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
 
 class NavbarPage extends Component {
@@ -24,27 +24,31 @@ render() {
           BUTTERS
         </MDBDropdownToggle>
         <MDBDropdownMenu color="danger" basic>
-          <MDBDropdownItem>Action</MDBDropdownItem>
-          <MDBDropdownItem>Another Action</MDBDropdownItem>
-          <MDBDropdownItem>Something else here</MDBDropdownItem>
-          <MDBDropdownItem>Something else here</MDBDropdownItem>
+          <MDBDropdownItem>Shea Butter</MDBDropdownItem>
+          <MDBDropdownItem>Cocoa Butter</MDBDropdownItem>
+          <MDBDropdownItem>Mango Butter</MDBDropdownItem>
+          <MDBDropdownItem>Avocado Butter</MDBDropdownItem>
         </MDBDropdownMenu>
       </MDBDropdown><hr/>
       <MDBDropdown>
         <MDBDropdownToggle caret color="default" size="sm">OILS</MDBDropdownToggle>
         <MDBDropdownMenu color="danger" className="dropdown dropright">
-          <MDBDropdownItem>Action</MDBDropdownItem>
-          <MDBDropdownItem>Another Action</MDBDropdownItem>
-          <MDBDropdownItem>Something else here</MDBDropdownItem>
-          <MDBDropdownItem>Something else here</MDBDropdownItem>
+          <MDBDropdownItem>Carrier oils column</MDBDropdownItem>
+          <MDBDropdownItem>Coconut oil</MDBDropdownItem>
+          <MDBDropdownItem>Carrot oil</MDBDropdownItem>
+          <MDBDropdownItem>See All</MDBDropdownItem>
+          <MDBDropdownItem>Essential Oils column</MDBDropdownItem>
+          <MDBDropdownItem>Orange EO</MDBDropdownItem>
+          <MDBDropdownItem>Lavender EO</MDBDropdownItem>
+          <MDBDropdownItem>See All</MDBDropdownItem>
         </MDBDropdownMenu>
       </MDBDropdown><hr/>
       <MDBDropdown>
-        <MDBDropdownToggle caret color= "white" size="sm">BUTTERS</MDBDropdownToggle>
+        <MDBDropdownToggle caret color= "white" size="sm">Emulsifiers</MDBDropdownToggle>
         <MDBDropdownMenu color="white">
-          <MDBDropdownItem>Action</MDBDropdownItem>
-          <MDBDropdownItem>Another Action</MDBDropdownItem>
-          <MDBDropdownItem>Something else here</MDBDropdownItem>
+          <MDBDropdownItem>E-wax</MDBDropdownItem>
+          <MDBDropdownItem>Acetyl-Alcohol</MDBDropdownItem>
+          <MDBDropdownItem>Stearic</MDBDropdownItem>
           <MDBDropdownItem>Something else here</MDBDropdownItem>
         </MDBDropdownMenu>
       </MDBDropdown> <hr/>

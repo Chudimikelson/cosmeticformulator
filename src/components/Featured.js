@@ -25,7 +25,7 @@ export default function Featured() {
   )
 }
 
-const SectionCss = styled.nav`
+const SectionCss = styled.div`
 img  {
   height: 150px;
   width: auto;
