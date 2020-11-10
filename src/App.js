@@ -11,10 +11,11 @@ import Modal from './components/Modal';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Helmet from 'react-helmet';
-import Butters from './components/Butters';
+import Butters from './components/AllButters';
 import Bestsells from './components/Bestsells';
 import Collection from './components/Collection';
 import Collections from './components/Collections';
+import ButterSingle from './components/ButterSingle';
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
           <Route path="/checkout" component={Checkout} />
           <Route exact path="/OILS" component={ProductList}/>
           <Route path="/BUTTERS" component={Butters}/>
+          <Route exact path="/butters-details" component={ButterSingle}/>
           <Route component={Default} />
         </Switch>
         <Modal/>

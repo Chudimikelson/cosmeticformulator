@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {storeProducts, detailProduct, detailCat, collectionDetail, bestsellerProducts, collections, lookup} from './data';
+import {storeProducts, detailProduct, detailCat, collectionDetail, bestsellerProducts, collections, lookup, butters, butterDetail} from './data';
 
 
 const ProductContext = React.createContext();
@@ -16,6 +16,8 @@ class ProductProvider extends Component {
         products: [],
         bestsellers: [],
         collections: [],
+        buttersList: [],
+        butterDetail: butterDetail,
         detailProduct:detailProduct,
         detailCat:detailCat,
         collectionDetail:collectionDetail,
@@ -34,6 +36,7 @@ class ProductProvider extends Component {
       this.setProducts();
       this.setBestsellers();
       this.setCollections();
+      this.setButters();
     }
     setProducts = () => {
       let tempProducts = [];
@@ -67,7 +70,26 @@ class ProductProvider extends Component {
         return {collections: tempCollections};
       });
     };
-
+    setButters = () => {
+      let tempButters = [];
+      butters.forEach(item => {
+        const oneItem = {...item};
+        tempButters = [...tempButters, oneItem];
+      });
+      this.setState(() =>{
+        return {buttersList: tempButters};
+      });
+    };
+    getButterItem = (id) =>{
+      const butterItem = this.state.buttersList.find(item => item.id === id);
+      return butterItem;
+    }
+    showButterItemDetails = id => {
+      const butterItemDetail = this.getButterItem(id);
+      this.setState(()=> {
+        return {butterDetail: butterItemDetail}
+      });
+    };
     getItem = (id) => {
       const product = this.state.products.find(item => item.id ===id);
       return product;
@@ -317,7 +339,8 @@ class ProductProvider extends Component {
                 increment:this.increment,
                 decrement:this.decrement,
                 removeItem:this.removeItem,
-                clearCart:this.clearCart
+                clearCart:this.clearCart,
+                showButterItemDetails:this.showButterItemDetails
             }}>
                 {this.props.children}
             </ProductContext.Provider>

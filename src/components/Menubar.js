@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
-import logo from '../logooo.png';
 import styled from 'styled-components';
 import { MDBNavbar, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
+import {ProductConsumer} from '../Context';
+import ButtersMenu from "./ButtersMenu";
 
 
 class NavbarPage extends Component {
@@ -24,10 +25,13 @@ render() {
           BUTTERS
         </MDBDropdownToggle>
         <MDBDropdownMenu color="danger" basic>
-          <MDBDropdownItem>Shea Butter</MDBDropdownItem>
-          <MDBDropdownItem>Cocoa Butter</MDBDropdownItem>
-          <MDBDropdownItem>Mango Butter</MDBDropdownItem>
-          <MDBDropdownItem>Avocado Butter</MDBDropdownItem>
+        <ProductConsumer>
+              {value => {
+                return value.buttersList.map( buttersItem => {
+                  return <ButtersMenu key={buttersItem.id} buttersItem={buttersItem}/>;
+                });
+              }}
+        </ProductConsumer>
         </MDBDropdownMenu>
       </MDBDropdown><hr/>
       <MDBDropdown>
@@ -52,8 +56,18 @@ render() {
           <MDBDropdownItem>Something else here</MDBDropdownItem>
         </MDBDropdownMenu>
       </MDBDropdown> <hr/>
-      <MDBDropdownToggle color="default" size="sm">OILS
-      </MDBDropdownToggle> <hr/>
+      <MDBDropdown>
+      <MDBDropdownToggle color="default" size="sm">OILS</MDBDropdownToggle>
+      <MDBDropdownMenu color="danger" basic>
+        <ProductConsumer>
+              {value => {
+                return value.buttersList.map( buttersItem => {
+                  return <ButtersMenu key={buttersItem.id} buttersItem={buttersItem}/>;
+                });
+              }}
+        </ProductConsumer>
+        </MDBDropdownMenu>
+      </MDBDropdown> <hr/>
         <MDBDropdown>
           <MDBDropdownToggle color="default" caret size="sm">SOAPMAKING
           </MDBDropdownToggle>

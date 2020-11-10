@@ -3,7 +3,7 @@ import oliveOil from '../photos/olive-oil.jpg';
 import Menubar from './Menubar';
 import styled from 'styled-components';
 
-export default function Butters() {
+export default function AllButters() {
   return (
   <ButterSection>
   <div className="bbn"><Menubar/></div>  
