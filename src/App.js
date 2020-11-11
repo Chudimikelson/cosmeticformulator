@@ -16,6 +16,7 @@ import Bestsells from './components/Bestsells';
 import Collection from './components/Collection';
 import Collections from './components/Collections';
 import ButterSingle from './components/ButterSingle';
+import MobileMenu from './components/MobileMenu';
 
 class App extends Component {
   render() {
@@ -27,7 +28,8 @@ class App extends Component {
         <meta name="description" content="description"
         />
         </Helmet>
-        <Navbar />
+        <Navbar className='bbn'/>
+        <div className="d-md-none"><MobileMenu/></div>  
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/details" component={Details} />

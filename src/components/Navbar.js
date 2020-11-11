@@ -4,6 +4,7 @@ import logo from '../cfd.png';
 import styled from 'styled-components';
 import Sidebar from './Sidebar';
 import { MDBNavbar,  MDBNavLink, MDBIcon, MDBCol } from "mdbreact";
+import MobileMenu from './MobileMenu';
 
 export default class Navbar extends Component {
   render() {
@@ -54,7 +55,7 @@ export default class Navbar extends Component {
           </div>
           <div className="d-md-none">
           <div className="d-flex justify-content-between">
-            <MDBNavbar className="col-2"><Sidebar/></MDBNavbar>
+            <MDBNavbar className="col-2"></MDBNavbar>
             <Link className="col-7" to='/'>
               <img className="mylogo img-fluid"src={logo} alt="Etoile Beauty Nigeria"/>
             </Link>

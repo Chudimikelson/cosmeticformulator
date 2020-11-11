@@ -8,6 +8,7 @@
     "delayed-scroll-restoration-polyfill": "^0.1.1",
     "mdbreact": "^4.20.0",
     "react": "^16.8.6",
+    "react-burger-menu": "^2.9.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-paypal-express-checkout": "^1.0.5",
