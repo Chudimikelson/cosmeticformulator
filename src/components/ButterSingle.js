@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Menubar from './Menubar';
 import Breadcrumb  from './Breadcrumbs';
 import ButtersList from './ButtersList';
+import Tabs from './Tabs';
+import Sizes from './Sizes';
 
 export default class ButterSingle extends Component {
   render() {
@@ -26,16 +28,16 @@ export default class ButterSingle extends Component {
                 <div className="row">
                   <h2 className="page-title font-weight-bold col-12">{title}</h2>
                   <div className="col-12 col-md-6">
-                    <img src={img} className="collection-image" alt="product"/>
+                    <div className="container"><img src={img} className="collection-image" alt="product"/></div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <div className="">sizes input</div>
+                    <Sizes/>
                     <div className="row">
-                      <div className="col-12 col-md-6">Quantity
-                      <div className="def-number-input number-input">
-                      <span className="btn btn-black bbindx-a" onClick={()=>decrement(id)} > - </span>
-                      <span className="btn btn-black bbindx-b"> {count} </span>
-                      <span className="btn btn-black bbindx-c" onClick={()=>increment(id)} > + </span>
+                      <div className="col-12 col-md-6">Quantity:
+                      <div className="d-flex def-number-input number-input">
+                      <span className="input-group-text btn btn-black" onClick={()=>decrement(id)} ><i className="fas fa-minus"></i></span>
+                      <input type="text" className="form-control" disabled placeholder= {count} aria-label="count" aria-describedby="basic-addon" />
+                      <span className="input-group-text btn-black" onClick={()=>increment(id)} ><i className="fas fa-plus"></i></span>
                       </div>
                       </div>
                       <div className="col-12 col-md-6">Price:
@@ -58,15 +60,9 @@ export default class ButterSingle extends Component {
                     </button>
                   </div>
                 </div>
+                
                 <div className="row page-title">
-                  <li><strong>Description</strong><br/>{description}</li>
-                  <li><strong>Contains</strong><br/>{contains}</li>
-                  <li><strong>How to use</strong><br/>{usage}</li>
-                  <li><strong>Safety</strong><br/>{life}</li>
-                  
-                  <Link to='/collections'>
-                    <button className="cart-btn text-center py-0 px-0 my-2" ><p className="mx-auto py-2 btc mb-0">Back to Collections</p></button>
-                  </Link>
+                  <Tabs description={description} usage={usage} contains={contains}/>
                 </div>
               </div>
             </div>

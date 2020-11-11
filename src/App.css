@@ -103,14 +103,14 @@ body{
 .ic {
   width: 70%;
   font-size: 0.8rem;
-  background: green;
+  background: lightgreen;
   border-radius: 1.5rem;
 }
 .nic {
   width: 70%;
   font-size: 0.8rem;
   border-radius: 1.5rem;
-  background: #c74d89e3;
+  background: green;
 }
 .btc {
   font-size: 0.8rem;
@@ -132,7 +132,7 @@ button:focus {
 }
 
 .nic:hover {
-  background: green;
+  background: lime;
   cursor: pointer;
 }
 
@@ -186,7 +186,7 @@ button:focus {
   
 }
 .nav-item a {
-  color: palevioletred !important;
+  color: lightgreen !important;
 }
 /* .bbn {
   background-color: palevioletred !important;
@@ -202,17 +202,17 @@ button:focus {
 }
 
 .footer {
-  background: palevioletred;
+  background: lightgreen;
   color: #fff;
   text-align: center;
 }
 
 .WithStyles\(ForwardRef\(ExpansionPanelDetails\)\)-root-81{
-  background: palevioletred;
+  background: lightgreen;
 }
 
 .MuiPaper-root {
-  background: palevioletred !important;
+  background: lightgreen !important;
 }
 .footer li {
   list-style: none;
