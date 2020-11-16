@@ -3,7 +3,6 @@ import {Switch, Route} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
-import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Checkout from './components/checkout/Checkout';
 import Default from './components/Default';
@@ -11,12 +10,11 @@ import Modal from './components/Modal';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Helmet from 'react-helmet';
-import Butters from './components/AllButters';
-import Bestsells from './components/Bestsells';
-import Collection from './components/Collection';
-import Collections from './components/Collections';
+import AllButters from './components/AllButters';
 import ButterSingle from './components/ButterSingle';
 import MobileMenu from './components/MobileMenu';
+import AllOils from './components/AllOils';
+import AllPowders from './components/AllPowders';
 
 class App extends Component {
   render() {
@@ -32,14 +30,11 @@ class App extends Component {
         <div className="d-md-none"><MobileMenu/></div>  
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/BUTTERS" component={AllButters}/>
+          <Route path="/OILS" component={AllOils}/>
+          <Route path="/POWDERS" component={AllPowders}/>
           <Route path="/details" component={Details} />
-          <Route path="/bestseller" component={Bestsells} />
-          <Route path="/collection" component={Collection}/>
-          <Route path="/collections" component={Collections}/>
           <Route path="/checkout" component={Checkout} />
-          <Route exact path="/OILS" component={ProductList}/>
-          <Route path="/BUTTERS" component={Butters}/>
-          <Route exact path="/butters-details" component={ButterSingle}/>
           <Route component={Default} />
         </Switch>
         <Modal/>

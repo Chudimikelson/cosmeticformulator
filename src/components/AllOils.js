@@ -4,19 +4,18 @@ import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import Menubar from './Menubar';
 import Breadcrumb  from './Breadcrumbs';
-import ButtersList from './ButtersList';
+import OilsList from './OilsList';
 import Tabs from './Tabs';
 import Sizes from './Sizes';
 import Featured from './Featured';
 
-export default class AllButters extends Component {
-    
+export default class AllOils extends Component {
   render() {
     return (
       <>
       <ProductConsumer>
         {(value)=>{
-          const {id,usage,description,img, life, contains, price, title,inCart, count,increment,decrement, category, mini, regular, large} = value.butterDetail;
+          const {id,usage,description,img, life, contains, price, title,inCart, count,increment,decrement, category,mini,regular,large} = value.oilDetail;
           return (
             <>
             <div className="bbn"><Menubar/></div>  
@@ -25,7 +24,7 @@ export default class AllButters extends Component {
             </div>
             <div className="container-fluid d-flex">
               <div className="col-md-3 bbn">
-                <ButtersList/>
+                <OilsList/>
               </div>
               <div className="col-12 col-md-9">
                 <div className="row">

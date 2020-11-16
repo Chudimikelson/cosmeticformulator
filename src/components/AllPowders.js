@@ -7,16 +7,13 @@ import Breadcrumb  from './Breadcrumbs';
 import ButtersList from './ButtersList';
 import Tabs from './Tabs';
 import Sizes from './Sizes';
-import Featured from './Featured';
 
-export default class AllButters extends Component {
-    
+export default class AllPowders extends Component {
   render() {
     return (
-      <>
       <ProductConsumer>
         {(value)=>{
-          const {id,usage,description,img, life, contains, price, title,inCart, count,increment,decrement, category, mini, regular, large} = value.butterDetail;
+          const {id,usage,description,img, life, contains, price, title,inCart, count,increment,decrement, category} = value.butterDetail;
           return (
             <>
             <div className="bbn"><Menubar/></div>  
@@ -34,7 +31,7 @@ export default class AllButters extends Component {
                     <div className="container"><img src={img} className="collection-image" alt="product"/></div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <Sizes mini={mini} regular={regular} large={large}/>
+                    <Sizes/>
                     <div className="row">
                       <div className="col-12 col-md-6">Quantity:
                       <div className="d-flex def-number-input number-input">
@@ -73,8 +70,6 @@ export default class AllButters extends Component {
           )
         }}
       </ProductConsumer>
-      <div className="mt-3 pt-4"><Featured/></div>
-      </>
     )
   }
 }

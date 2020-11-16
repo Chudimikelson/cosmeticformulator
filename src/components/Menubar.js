@@ -5,6 +5,7 @@ import { MDBNavbar, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import {ProductConsumer} from '../Context';
 import ButtersMenu from "./ButtersMenu";
+import OilsMenu from './OilsMenu';
 
 
 class NavbarPage extends Component {
@@ -61,8 +62,8 @@ render() {
       <MDBDropdownMenu color="danger" basic>
         <ProductConsumer>
               {value => {
-                return value.buttersList.map( buttersItem => {
-                  return <ButtersMenu key={buttersItem.id} buttersItem={buttersItem}/>;
+                return value.oilsList.map( oilsItem => {
+                  return <OilsMenu key={oilsItem.id} oilsItem={oilsItem}/>;
                 });
               }}
         </ProductConsumer>

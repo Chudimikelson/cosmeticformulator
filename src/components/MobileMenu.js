@@ -1,22 +1,12 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import styled from 'styled-components';
+import Accordion from './Accordion';
 
 export default props => {
   return (
     <MobileMenuCss><Menu>
-      <a className="menu-item" href="/">
-        Home
-      </a>
-      <a className="menu-item" href="/salads">
-        Salads
-      </a>
-      <a className="menu-item" href="/pizzas">
-        Pizzas
-      </a>
-      <a className="menu-item" href="/desserts">
-        Desserts
-      </a>
+      <Accordion/>
     </Menu></MobileMenuCss>
   );
 };
@@ -58,13 +48,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 */
 .bm-menu-wrap {
   position: fixed;
+  top: 0;
   height: 100%;
+  width: 100%;
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: #373a47;
-  padding: 2.5em 1.5em 0;
+  padding: 2.5em 0 0;
   font-size: 1.15em;
 }
 
@@ -76,7 +68,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
-  padding: 0.8em;
+  padding: 0.8em 0;
 }
 
 /* Individual item */

@@ -224,8 +224,6 @@ button:focus {
 
 .footer-panels {
   background: #ffffffc4 !important;
-  border-radius: 10px 10px 0 0 !important;
-  
 }
 
 .footer-panels:after {
@@ -349,6 +347,10 @@ button:focus {
 
 .u-dancing-script {
   font-family: 'Dancing Script', cursive;
+}
+
+.bm-menu-wrap {
+  width:100% !important;
 }
 
 @media screen and (max-width:420px) {

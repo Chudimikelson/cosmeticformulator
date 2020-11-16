@@ -5,15 +5,15 @@ import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
 import { MDBDropdownItem } from "mdbreact";
 
-export default class ButtersMenu extends Component {
+export default class OilsMenu extends Component {
   render() {
-    const { id, title } = this.props.buttersItem;
+    const { id, title } = this.props.oilsItem;
     return (
       <Btn>
   
         <ProductConsumer>
             {value => (
-              <Link to="/butters"><MDBDropdownItem onClick={()=>{value.showButterItemDetails(id)}}>{title}</MDBDropdownItem> </Link>              
+              <Link to="/oils"><MDBDropdownItem onClick={()=>{value.showOilItemDetails(id)}}>{title}</MDBDropdownItem> </Link>              
             )}
           </ProductConsumer>
 
@@ -21,8 +21,8 @@ export default class ButtersMenu extends Component {
     )
   }
 }
-ButtersMenu.propTypes = {
-  buttersItem: PropTypes.shape({
+OilsMenu.propTypes = {
+  oilsItem: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string
   }).isRequired

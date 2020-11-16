@@ -4,6 +4,7 @@ import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
+import ButtersList from './ButtersList';
 
 const ExpansionPanel = withStyles({
   root: {
@@ -57,7 +58,7 @@ export default function CustomizedExpansionPanels() {
     <div>
       <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ExpansionPanelSummary className="footer-panels" aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>Company</Typography>
+          <Typography>BASES</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
@@ -69,6 +70,52 @@ export default function CustomizedExpansionPanels() {
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <ExpansionPanelSummary className="footer-panels" aria-controls="panel2d-content" id="panel2d-header">
+          <Typography>BUTTERS</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+              <ButtersList/>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+        <ExpansionPanelSummary className="footer-panels" aria-controls="panel3d-content" id="panel3d-header">
+          <Typography>ESSENTIAL OILS</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+              <li>About Us</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel square expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+        <ExpansionPanelSummary className="footer-panels" aria-controls="panel4d-content" id="panel4d-header">
+          <Typography>CARRIER OILS</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+              <li>About Us</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel square expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+        <ExpansionPanelSummary className="footer-panels" aria-controls="panel5d-content" id="panel5d-header">
+          <Typography>Company</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+              <li>About Us</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel square expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+        <ExpansionPanelSummary className="footer-panels" aria-controls="panel6d-content" id="panel6d-header">
           <Typography>
             Customer Service
           </Typography>
@@ -86,8 +133,8 @@ export default function CustomizedExpansionPanels() {
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-        <ExpansionPanelSummary className="footer-panels" aria-controls="panel3d-content" id="panel3d-header">
+      <ExpansionPanel square expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
+        <ExpansionPanelSummary className="footer-panels" aria-controls="panel7d-content" id="panel7d-header">
           <Typography>Contact Us</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>

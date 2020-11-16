@@ -8,7 +8,7 @@ import ButtersList from './ButtersList';
 import Tabs from './Tabs';
 import Sizes from './Sizes';
 
-export default class ButterSingle extends Component {
+export default class Oils extends Component {
   render() {
     return (
       <ProductConsumer>
