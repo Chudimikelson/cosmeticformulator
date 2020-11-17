@@ -20,6 +20,25 @@ body{
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
+
+
+.mainGreen {
+  background-image: radial-gradient(circle, #56ab2f, #008000, #008000 );
+}
+
+.breadcrumb {
+  background-image: linear-gradient( to right, #5bec7f, #76ec40, #008000 )!important;
+}
+
+.list-of-items {
+  background-color: rgb(144 238 144)!important;
+}
+
+.list-group-item {
+  border-color: #4CAF50 !important;
+  padding: .5rem .75rem !important;
+}
+
 .text-blue {
   color: var(--mainBlue);
 }
@@ -351,6 +370,11 @@ button:focus {
 
 .bm-menu-wrap {
   width:100% !important;
+}
+
+.nav-tabs .nav-link {
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
 }
 
 @media screen and (max-width:420px) {

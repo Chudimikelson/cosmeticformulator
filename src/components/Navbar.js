@@ -12,7 +12,7 @@ export default class Navbar extends Component {
       <React.Fragment>
         <NavWrapper>
           <div className="bbn">
-            <div className="bbn d-flex justify-content-between" id="topRibbon">
+            <div className="bbn d-flex justify-content-between mainGreen">
               <p className="font-xs text-contrast">important information to note</p>
               <MDBNavbar className="py-0">
                 <MDBNavLink className="text-contrast font-regular pr-0 mr-1">Connect with us</MDBNavLink>
@@ -80,9 +80,7 @@ img  {
 #cartbtn {
   font-size: 3rem;
 }
-#topRibbon {
-  background: green;
-}
+
 hr {
   transform: rotate(90deg);
   width: 1rem;

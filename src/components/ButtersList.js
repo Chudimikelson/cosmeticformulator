@@ -10,7 +10,7 @@ export default class ButtersList extends Component {
     
   return (
     <Liststyle><MDBListGroup>
-      <MDBListGroupItem active disabled style={{"background-color":"#008000", "border-color":"#4CAF50"}}>List of Butters</MDBListGroupItem>
+      <MDBListGroupItem active disabled className='list-of-items lead text-center'>LIST OF BUTTERS</MDBListGroupItem>
     <ProductConsumer>
               {value => {
                 return value.buttersList.map( buttersItem => {

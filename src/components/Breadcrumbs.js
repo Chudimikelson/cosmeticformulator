@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom';
 
 export default function Breadcrumbs({title, category}) {
   return (
-    <div>
-      <MDBBreadcrumb style={{'background':"#90ee90db"}}>
-        <MDBBreadcrumbItem ><Link to='/'>HOME</Link></MDBBreadcrumbItem>
+    <div >
+      <MDBBreadcrumb className='secondGreen text-contrast'>
+        <MDBBreadcrumbItem ><Link to='/' className='text-contrast'>HOME</Link></MDBBreadcrumbItem>
         <MDBBreadcrumbItem>{category}</MDBBreadcrumbItem>
         <MDBBreadcrumbItem active>{title}</MDBBreadcrumbItem>
       </MDBBreadcrumb>

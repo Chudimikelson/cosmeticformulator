@@ -13,7 +13,7 @@ export default class ButtersMenu extends Component {
   
         <ProductConsumer>
             {value => (
-              <Link to="/butters"><MDBDropdownItem onClick={()=>{value.showButterItemDetails(id)}}>{title}</MDBDropdownItem> </Link>              
+              <MDBDropdownItem onClick={()=>{value.showButterItemDetails(id)}}><Link to="/butters">{title}</Link> </MDBDropdownItem>              
             )}
           </ProductConsumer>
 
