@@ -23,15 +23,17 @@ export default class AllButters extends Component {
             <div className="container-fluid">
               <Breadcrumb title={title} category={category}/>
             </div>
-            <div className="container-fluid d-flex">
+            <section className="section  bg-contrast container-fluid ">
+            <div className="rounded shadow container-fluid border py-4"><div className="row">
               <div className="col-md-3 bbn">
                 <ButtersList/>
               </div>
-              <div className="col-12 col-md-9">
-                <div className="row">
-                  <h2 className="page-title font-weight-bold col-12">{title}</h2>
+              <div className="col-12 col-md-8">
+                <div className="swiper-container">
+                  <div className="swiper-wrapper"><h2 className="page-title font-weight-bold col-12">{title}</h2>
+                  <div className="row">
                   <div className="col-12 col-md-6">
-                    <div className="container"><img src={img} className="collection-image" alt="product"/></div>
+                    <img src={img} className="img-fluid collection-image border rounded shadow" alt="product"/>
                   </div>
                   <div className="col-12 col-md-6">
                     <Sizes mini={mini} regular={regular} large={large}/>
@@ -62,13 +64,15 @@ export default class AllButters extends Component {
                       )}
                     </button>
                   </div>
-                </div>
-                
-                <div className="row page-title">
+                <div className="col-12 page-title">
                   <Tabs description={description} usage={usage} contains={contains}/>
+                </div>
+                </div>
+                </div>
                 </div>
               </div>
             </div>
+            </div></section>
             </>
           )
         }}

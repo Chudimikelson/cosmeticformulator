@@ -16,20 +16,20 @@ import React, { Component } from "react";
 
     render() {
       return (
-        <MDBContainer>
-        <MDBNav className="nav-tabs mt-5">
+        <div>
+        <MDBNav className="nav-tabs mt-4">
           <MDBNavItem>
-            <MDBNavLink link to="#" active={this.state.activeItem === "1"} onClick={this.toggle("1")} role="tab" >
+            <MDBNavLink className="font-regular" link to="#" active={this.state.activeItem === "1"} onClick={this.toggle("1")} role="tab" >
               Details
             </MDBNavLink>
           </MDBNavItem>
           <MDBNavItem>
-            <MDBNavLink link to="#" active={this.state.activeItem === "2"} onClick={this.toggle("2")} role="tab" >
+            <MDBNavLink className="font-regular" link to="#" active={this.state.activeItem === "2"} onClick={this.toggle("2")} role="tab" >
               Documents
             </MDBNavLink>
           </MDBNavItem>
           <MDBNavItem>
-            <MDBNavLink link to="#" active={this.state.activeItem === "3"} onClick={this.toggle("3")} role="tab" >
+            <MDBNavLink className="font-regular" link to="#" active={this.state.activeItem === "3"} onClick={this.toggle("3")} role="tab" >
               Reviews
             </MDBNavLink>
           </MDBNavItem>
@@ -51,7 +51,7 @@ import React, { Component } from "react";
             </p>
           </MDBTabPane>
         </MDBTabContent>
-      </MDBContainer>
+      </div>
     );
   }
 }

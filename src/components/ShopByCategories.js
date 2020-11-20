@@ -1,26 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import catPic1 from '../photos/active glow set.jpg';
+import catPic1 from '../photos/buttermilk.jpg';
 import catPic2 from '../carrier-oils.jpg';
+import catPic3 from '../photos/avocado_unrefined.jpg';
 import {Link} from 'react-router-dom';
 
 export default function ShopByCategories() {
   return (
     <Sbc>
-      <div className="mt-3 mx-auto flex-container row">
+      <div className="d-flex">
         <div className="col-md-4 col-lg-4">
-          <img className="img-fluid" style={{height:250}}  src={catPic2}  alt="Etoile Beauty Nig skin lightening black soap brightening body lotion"/><Link to="/OILS">
+          <img className="img-fluid card shadow" style={{height:250}}  src={catPic2}  alt="Etoile Beauty Nig skin lightening black soap brightening body lotion"/><Link to="/OILS">
           <div className="finess mx-auto">
             
               <button className="py-1 text-capitalize">Oils</button>
             
           </div> </Link> 
         </div>
-        <div className="col-md-4 col-lg-4"><img className="img-fluid" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic1} /><Link to="/BUTTERS">
+        <div className="col-md-4 col-lg-4"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic3} /><Link to="/BUTTERS">
           <div className="finess mx-auto"><button className="py-1 text-capitalize">Butters</button>
           </div></Link>
         </div>
-        <div className="col-md-4 col-lg-4"><img className="img-fluid" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic2} /><Link to="/POWDERS">
+        <div className="col-md-4 col-lg-4"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic1} /><Link to="/POWDERS">
           <div className="finess mx-auto"><button className="py-1 text-capitalize">Powders</button>
           </div></Link>
         </div>
@@ -53,7 +54,6 @@ const Sbc = styled.div `
 
 img {
   width:100%;
-  border-radius: .5rem;
 }
 
 `

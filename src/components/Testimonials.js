@@ -5,6 +5,7 @@ export default function Testimonials () {
     <div className="container">
       <section className="bbn section block bg-contrast">
         <div className="py-4">
+        <div className="font-md text-center u-dancing-script">What our customers are saying</div>
           <div className="swiper-container pb-5">
             <div className="swiper-wrapper d-flex">
               <div className="swiper-slide col-4">
@@ -34,7 +35,7 @@ export default function Testimonials () {
                                   <div className="col-md-7">
                                       <div className="p-4">
                                           <h6 className="bold font-l">Aline De Souza</h6>
-                                          <p className="small mt-0 text-primary text-uppercase mb-5">Marketing Director</p>
+                                          <p className="small mt-0 text-primary text-uppercase mb-5">Marketing </p>
                                           <blockquote className="team-quote pt-1"><i className="quote fas fa-quote-left"></i>
                                               <p className="italic pl-4">The girl that influences our products.</p>
                                           </blockquote>

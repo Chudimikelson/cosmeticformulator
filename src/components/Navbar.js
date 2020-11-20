@@ -46,23 +46,22 @@ export default class Navbar extends Component {
                 </div>
               </MDBCol>
               <MDBNavbar className="text-right">
-                <MDBNavLink to="/checkout" style={{"color":"black"}}>
-                  <span className="font-xs"><i className="mr-2 fas fa-shopping-cart" />Cart Empty</span><br/>
-                  <span className="small">CHECKOUT</span>
+                <MDBNavLink to="/checkout">
+                  <span className="cartbtn mr-2"><i className="fas fa-shopping-cart" /></span>
+                  <span className="checkout-btn">CHECKOUT</span>
                 </MDBNavLink>
               </MDBNavbar>
             </div>
           </div>
           <div className="d-md-none">
           <div className="d-flex justify-content-between">
-            <MDBNavbar className="col-2"></MDBNavbar>
-            <Link className="col-7" to='/'>
+            <div className="col-3"><Sidebar/></div>
+            <Link className="col-6" to='/'>
               <img className="mylogo img-fluid"src={logo} alt="Etoile Beauty Nigeria"/>
             </Link>
             <MDBNavbar className="text-right col-3">
                 <MDBNavLink to="/checkout" style={{"color":"black"}}>
-                  <span className="font-xs"><i className="mr-2 fas fa-shopping-cart" /></span><br/>
-                  <span className="font-xs">N0.00</span>
+                  <span className="font-l"><i className="mr-2 fas fa-shopping-cart" style={{"color": "#56ab2f"}} /></span>
                 </MDBNavLink>
               </MDBNavbar>
           </div>
@@ -77,10 +76,33 @@ const NavWrapper = styled.nav`
 img  {
   max-height: 112px;
 }
-#cartbtn {
-  font-size: 3rem;
+
+
+.checkout-btn {
+  background: linear-gradient(40deg,#56ab2f, #008000);
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  padding: 8px 15px;
+  box-shadow: 0 2px 9px 0 rgba(0,0,0,.18), 0 2px 12px 0 rgba(0,0,0,.15);
 }
 
+.cartbtn {
+  background: linear-gradient(40deg,#ffd86f,#fc6262);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.15), 0 1px 5px 0 rgba(0,0,0,.15);
+  border-radius: 50%;
+  height: 47px;
+  width: 45px;
+  vertical-align: middle;
+  padding: 8px;
+}
+
+.cartbtn i {
+  font-size: 1.25rem;
+  line-height: 47px;
+  color: #fff;
+  text-align: center;
+}
 hr {
   transform: rotate(90deg);
   width: 1rem;
@@ -91,5 +113,9 @@ input.form-control, span.input-group-text {
 }
 span.input-group-text {
   background : #90ee90;
+}
+.mylogo{
+  max-height: 60px;
+  width: 100%;
 }
 `

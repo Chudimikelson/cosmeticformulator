@@ -5,6 +5,9 @@ import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ButtersList from './ButtersList';
+import { MDBDropdownItem } from "mdbreact";
+import { Link } from 'react-router-dom';
+
 
 const ExpansionPanel = withStyles({
   root: {
@@ -47,59 +50,53 @@ const ExpansionPanelDetails = withStyles(theme => ({
   },
 }))(MuiExpansionPanelDetails);
 
-export default function CustomizedExpansionPanels() {
+export default function CustomizedExpansionPanels(props) {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = panel => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-
+  
   return (
     <div>
       <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ExpansionPanelSummary className="footer-panels" aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>BASES</Typography>
+          <Typography>BUTTERS</Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-              <li>About Us</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-          </Typography>
+        <ExpansionPanelDetails className="nav">
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Shea Butter</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Mango Butter</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Cocoa Butter</Link></MDBDropdownItem>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <ExpansionPanelSummary className="footer-panels" aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>BUTTERS</Typography>
+          <Typography>POWDERS</Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-              <ButtersList/>
-          </Typography>
+        <ExpansionPanelDetails className="nav">
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Niacinamide</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Kojic</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Mango Butter</Link></MDBDropdownItem>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <ExpansionPanelSummary className="footer-panels" aria-controls="panel3d-content" id="panel3d-header">
           <Typography>ESSENTIAL OILS</Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-              <li>About Us</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-          </Typography>
+        <ExpansionPanelDetails className="nav">
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Lavender E/Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Rosemary E/Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Orange E/Oil</Link></MDBDropdownItem>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <ExpansionPanelSummary className="footer-panels" aria-controls="panel4d-content" id="panel4d-header">
           <Typography>CARRIER OILS</Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-              <li>About Us</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-          </Typography>
+        <ExpansionPanelDetails className="nav">
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Carrot Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Sunflower Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Olive Oil</Link></MDBDropdownItem>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>

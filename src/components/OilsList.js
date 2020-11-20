@@ -9,16 +9,16 @@ export default class OilsList extends Component {
   render (){
     
   return (
-    <Liststyle><MDBListGroup>
+    <Liststyle><nav className="nav flex-md-column nav-pills nav-fill"><MDBListGroup>
       <MDBListGroupItem active disabled className='list-of-items text-center lead'>LIST OF OILS</MDBListGroupItem>
     <ProductConsumer>
               {value => {
                 return value.oilsList.map( oilsItem => {
-                  return <MDBListGroupItem hover><OilsMenu key={oilsItem.id} oilsItem={oilsItem}/></MDBListGroupItem>;
+                  return <MDBListGroupItem className="nav-item text-left nav-link py-3 my-2 lead"><OilsMenu key={oilsItem.id} oilsItem={oilsItem}/></MDBListGroupItem>;
                 });
               }}
         </ProductConsumer>
-      </MDBListGroup>
+      </MDBListGroup></nav>
       </Liststyle>
   )
 }
@@ -31,5 +31,12 @@ OilsList.propTypes = {
 };
 
 const Liststyle = styled.div`
+a {
+  text-decoration: none;
+}
+.nav-item:hover, .dropdown-item:hover {
+  background-color: #32ae1b;
+  color: #fff;
+}
 `
 

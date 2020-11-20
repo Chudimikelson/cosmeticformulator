@@ -280,7 +280,7 @@ button:focus {
 
 
 .fab, .fas {
-  color: lightgreen;
+  color: #fff;
 }
 
 #menuBar {
@@ -290,11 +290,10 @@ button:focus {
 
 }
 
-.fa-shopping-cart {
-  font-size: 1.2rem;
-}
+
 .fa-bars {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  color: #56ab2f;
 }
 .one .fab {
   margin: 0 .2rem;
@@ -377,6 +376,11 @@ button:focus {
   padding-bottom: 3px !important;
 }
 
+.modal-body {
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 @media screen and (max-width:420px) {
   .bbn {
     display:none;

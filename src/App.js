@@ -26,8 +26,7 @@ class App extends Component {
         <meta name="description" content="description"
         />
         </Helmet>
-        <Navbar className='bbn'/>
-        <div className="d-md-none"><MobileMenu/></div>  
+        <Navbar className='bbn'/> 
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/BUTTERS" component={AllButters}/>

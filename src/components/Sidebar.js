@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {Modal, ModalHeader, ModalBody} from 'reactstrap';
 import styled from 'styled-components';
+import Accordion from './Accordion';
+
 export default class Sidebar extends Component {
   constructor (props) {
     super(props);
@@ -26,8 +28,9 @@ export default class Sidebar extends Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Etoile Beauty</ModalHeader>
           <ModalBody>
+            <Accordion toggle={this.toggle}/>
           <NavWrapper>
-          <div className="flex-container">
+          <div className="container">
         <ul className="d-flex menu pr-2 navbar-nav mx-auto text-capitalize">
         <li className="nav-item active">
             <Link to="/" onClick={this.toggle} className="nav-link">home</Link>
