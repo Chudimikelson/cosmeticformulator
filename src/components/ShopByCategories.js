@@ -8,8 +8,8 @@ import {Link} from 'react-router-dom';
 export default function ShopByCategories() {
   return (
     <Sbc>
-      <div className="d-flex">
-        <div className="col-md-4 col-lg-4">
+      <div className="d-flex flex-wrap">
+        <div className="col-md-4 col-12">
           <img className="img-fluid card shadow" style={{height:250}}  src={catPic2}  alt="Etoile Beauty Nig skin lightening black soap brightening body lotion"/><Link to="/OILS">
           <div className="finess mx-auto">
             
@@ -17,11 +17,11 @@ export default function ShopByCategories() {
             
           </div> </Link> 
         </div>
-        <div className="col-md-4 col-lg-4"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic3} /><Link to="/BUTTERS">
+        <div className="col-md-4 col-12"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic3} /><Link to="/BUTTERS">
           <div className="finess mx-auto"><button className="py-1 text-capitalize">Butters</button>
           </div></Link>
         </div>
-        <div className="col-md-4 col-lg-4"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic1} /><Link to="/POWDERS">
+        <div className="col-md-4 col-12"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic1} /><Link to="/POWDERS">
           <div className="finess mx-auto"><button className="py-1 text-capitalize">Powders</button>
           </div></Link>
         </div>
@@ -46,6 +46,7 @@ const Sbc = styled.div `
   position: relative;
   bottom: 8rem;
   text-align: center;
+  border-radius: .5rem;
 }
 
 .btn:hover {

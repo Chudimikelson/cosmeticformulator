@@ -53,7 +53,7 @@ export default class Navbar extends Component {
               </MDBNavbar>
             </div>
           </div>
-          <div className="d-md-none">
+          <div className="d-md-none pt-3">
           <div className="d-flex justify-content-between">
             <div className="col-3"><Sidebar/></div>
             <Link className="col-6" to='/'>

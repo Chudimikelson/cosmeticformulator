@@ -5,7 +5,7 @@ import banner from '../photos/banner-image.png';
 const Banner = () => {
   return (
     <Bannerstyle>
-    <section className="container-fluid">
+    <section className="container-fluid pb-3">
       <div className="swiper-container shop-home-slider">
         <div className="swiper-wrapper">
           <div className="swiper-slide">
