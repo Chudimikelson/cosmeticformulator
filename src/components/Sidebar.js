@@ -26,7 +26,7 @@ export default class Sidebar extends Component {
         <span id='menubaricon' ><i className="fas fa-bars my-2"></i></span>
         </button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Etoile Beauty</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Cosmetic Formulator Depot</ModalHeader>
           <ModalBody>
             <Accordion toggle={this.toggle}/>
           </ModalBody>
