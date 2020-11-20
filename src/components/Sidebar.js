@@ -29,24 +29,6 @@ export default class Sidebar extends Component {
           <ModalHeader toggle={this.toggle}>Etoile Beauty</ModalHeader>
           <ModalBody>
             <Accordion toggle={this.toggle}/>
-          <NavWrapper>
-          <div className="container">
-        <ul className="d-flex menu pr-2 navbar-nav mx-auto text-capitalize">
-        <li className="nav-item active">
-            <Link to="/" onClick={this.toggle} className="nav-link">home</Link>
-          </li>
-          <li className="nav-item">
-          <Link to="/shop" onClick={this.toggle} className="nav-link">Shop</Link>
-          </li>
-          <li className="nav-item">
-          <Link to="/Academy" onClick={this.toggle}className="nav-link">Skincare Courses</Link>
-          </li>
-          <li className="nav-item">
-          <Link to="/Diy" onClick={this.toggle}className="nav-link">DIY Store</Link>
-          </li>
-        </ul>
-        </div>
-        </NavWrapper>
           </ModalBody>
         </Modal>
         

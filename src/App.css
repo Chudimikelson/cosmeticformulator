@@ -377,9 +377,7 @@ button:focus {
 }
 
 .modal-body {
-  padding-top: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding: 1px !important;
 }
 @media screen and (max-width:420px) {
   .bbn {
