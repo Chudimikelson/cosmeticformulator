@@ -52,7 +52,7 @@ export default class Oils extends Component {
                       </div>
                     </div>
                   <button className="cart-btn text-center text-tit py-0 px-0 my-2" disabled={inCart? true : false}
-                      onClick={()=> { value.addCollectionToCart(id);}} > 
+                      onClick={()=> { value.addBsToCart(id);}} > 
                       {inCart? (
                       <p className="mx-auto ic text-capitalize text-center py-2 mb-0" disabled>Item added</p> ) : (
                       <p className= "py-2 nic mx-auto text-capitalize mb-0">Add to Cart</p>

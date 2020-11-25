@@ -4,7 +4,6 @@ import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
-import ButtersList from './ButtersList';
 import { MDBDropdownItem } from "mdbreact";
 import { Link } from 'react-router-dom';
 

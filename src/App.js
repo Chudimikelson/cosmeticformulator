@@ -10,9 +10,7 @@ import Modal from './components/Modal';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Helmet from 'react-helmet';
-import AllButters from './components/AllButters';
-import ButterSingle from './components/ButterSingle';
-import MobileMenu from './components/MobileMenu';
+import AllButters from './components/c.OilsAndButters/AllButters';
 import AllOils from './components/AllOils';
 import AllPowders from './components/AllPowders';
 

@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import Menubar from './Menubar';
 import Breadcrumb  from './Breadcrumbs';
-import ButtersList from './ButtersList';
 import Tabs from './Tabs';
 import Sizes from './Sizes';
 
@@ -22,7 +21,6 @@ export default class AllPowders extends Component {
             </div>
             <div className="container-fluid d-flex">
               <div className="col-md-3 bbn">
-                <ButtersList/>
               </div>
               <div className="col-12 col-md-9">
                 <div className="row">

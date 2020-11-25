@@ -167,15 +167,15 @@ class ProductProvider extends Component {
     };
 
     addBsToCart = (id) => {
-      let tempBestsellerProducts = [...this.state.bestsellers];
-      const posit = tempBestsellerProducts.indexOf(this.getbestsellers(id));
-      const bs = tempBestsellerProducts[posit];
+      let tempButters = [...this.state.buttersList];
+      const posit = tempButters.indexOf(this.getButterItem(id));
+      const bs = tempButters[posit];
       bs.inCart = true;
       bs.count = 1;
       const price = bs.price;
       bs.total = price;
       this.setState(() => {
-        return {bestsellers:tempBestsellerProducts, cart:[...this.state.cart, bs]};
+        return {buttersList:tempButters, cart:[...this.state.cart, bs]};
       }, () => {
         this.addTotals();
       });

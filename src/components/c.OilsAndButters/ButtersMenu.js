@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-import { ProductConsumer } from "../Context";
+import { ProductConsumer } from "../../Context";
 import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
 import { MDBDropdownItem } from "mdbreact";
@@ -10,13 +10,11 @@ export default class ButtersMenu extends Component {
     const { id, title } = this.props.buttersItem;
     return (
       <Btn>
-  
         <ProductConsumer>
             {value => (
-              <MDBDropdownItem onClick={()=>{value.showButterItemDetails(id)}}><Link to="/butters">{title}</Link> </MDBDropdownItem>              
+              <Link to="/butters" onClick={()=>{value.showButterItemDetails(id)}}>{title}</Link>              
             )}
           </ProductConsumer>
-
         </Btn>
     )
   }

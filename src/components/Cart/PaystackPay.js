@@ -7,7 +7,7 @@ import React, { Component } from 'react';
       
       
       state = {
-    		key: "pk_test_e68e9bce6e83ff3334c00f69c66ae5f0cc8e39ca", //PAYSTACK PUBLIC KEY
+    		key: "pk_live_b97cbd17c62656f4b7d6363828d322aac8826b70", //PAYSTACK PUBLIC KEY
         email: "customer email",  
         
     		metadata: {
@@ -79,18 +79,16 @@ import React, { Component } from 'react';
       render() {
       
         return (
-          <React.Fragment>
             
-          <div>
+          <div className="mt-0 pt-0" >
             
             <PaystackButton
-                
                 text="Make Payment"
                 class="payButton"
                 callback={this.callback}
                 close={this.close}
                 disabled={false} 
-                embed={false} 
+                embed={true} 
                 reference={this.getReference()}
                 email={this.state.email}
                 metadata={this.state.metadata}
@@ -100,7 +98,6 @@ import React, { Component } from 'react';
               />
             
           </div>
-          </React.Fragment>
         );
       }
     }

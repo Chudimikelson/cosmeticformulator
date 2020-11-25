@@ -17,7 +17,7 @@ import React, { Component } from "react";
     render() {
       return (
         <div>
-        <MDBNav className="nav-tabs mt-4">
+        <MDBNav className="nav-tabs">
           <MDBNavItem>
             <MDBNavLink className="font-regular" link to="#" active={this.state.activeItem === "1"} onClick={this.toggle("1")} role="tab" >
               Details

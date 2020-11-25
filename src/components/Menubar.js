@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { MDBNavbar, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import {ProductConsumer} from '../Context';
-import ButtersMenu from "./ButtersMenu";
+import ButtersMenu from "./c.OilsAndButters/ButtersMenu";
 import OilsMenu from './OilsMenu';
 
 
@@ -22,7 +22,7 @@ render() {
     <NavWrapper className="container-fluid">
       <MDBNavbar color="default-color" dark expand="md">
       <MDBDropdown >
-        <MDBDropdownToggle caret color="default" className="lead categories">BUTTERS
+        <MDBDropdownToggle caret color="default" className="lead categories">BUTTERS & WAXES
         </MDBDropdownToggle>
         <MDBDropdownMenu color="danger" basic>
         <ProductConsumer>
@@ -60,16 +60,17 @@ render() {
         </MDBDropdownMenu>
       </MDBDropdown><hr/>
       <MDBDropdown>
-        <MDBDropdownToggle caret color= "white" className="lead categories">EMULSIFIERS</MDBDropdownToggle>
+        <MDBDropdownToggle caret color= "white" className="lead categories">ADDITIVES</MDBDropdownToggle>
         <MDBDropdownMenu color="white">
-          <MDBDropdownItem>E-wax</MDBDropdownItem>
-          <MDBDropdownItem>Acetyl-Alcohol</MDBDropdownItem>
-          <MDBDropdownItem>Stearic</MDBDropdownItem>
-          <MDBDropdownItem>Something else here</MDBDropdownItem>
+          <MDBDropdownItem>CLAYS</MDBDropdownItem>
+          <MDBDropdownItem>POWDERS</MDBDropdownItem>
+          <MDBDropdownItem>PLANT EXTRACTTS</MDBDropdownItem>
+          <MDBDropdownItem>HYDROSOLS</MDBDropdownItem>
+          <MDBDropdownItem>SOLVENTS</MDBDropdownItem>
         </MDBDropdownMenu>
       </MDBDropdown> <hr/>
       <MDBDropdown>
-      <MDBDropdownToggle color="default" className="lead categories">OILS</MDBDropdownToggle>
+      <MDBDropdownToggle color="default" className="lead categories">SURFACTANTS</MDBDropdownToggle>
       <MDBDropdownMenu color="danger" basic>
         <ProductConsumer>
               {value => {
@@ -81,7 +82,7 @@ render() {
         </MDBDropdownMenu>
       </MDBDropdown> <hr/>
         <MDBDropdown>
-          <MDBDropdownToggle color="default" caret className="lead categories">SOAPMAKING
+          <MDBDropdownToggle color="default" caret className="lead categories">ACTIVES
           </MDBDropdownToggle>
           <MDBDropdownMenu className="dropdown-default">
             <MDBDropdownItem >Body</MDBDropdownItem>
@@ -90,7 +91,7 @@ render() {
           </MDBDropdownMenu>
         </MDBDropdown> <hr/>
         <MDBDropdown>
-          <MDBDropdownToggle color="default" caret className="lead categories"><span className="px-1">BASES</span>
+          <MDBDropdownToggle color="default" caret className="lead categories"><span className="px-1">PRESERVATIVES</span>
           </MDBDropdownToggle>
           <MDBDropdownMenu className="dropdown dropleft">
             <MDBDropdownItem >Customer Care</MDBDropdownItem>

@@ -58,27 +58,14 @@ body{
   width: 100%;
 }
 
-.bbindx-a {
-  background: palevioletred !important;
-  border-top-left-radius: 0.9rem !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-left-radius: 0.9rem !important;
-  border-bottom-right-radius: 0 !important;
-  border-right: 0 !important;
-  height: 2rem;  
-}
-.bbindx-c {
-  background: palevioletred  !important;
-  border-top-right-radius: 0.9rem !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-right-radius: 0.9rem !important;
-  border-bottom-left-radius: 0 !important;
-  border-left: 0 !important;
-  height: 2rem;
+.bbindx-a, .bbindex-c {
+  background: linear-gradient(40deg,#ffd86f,#fc6262) !important;
+  border-radius: 50% !important; 
 }
 .bbindx-b {
   background: #f3f3f3  !important;
   border-radius: 0 !important;
+  width: 60px !important;
 }
 .btn-black {
   background: transparent;
@@ -120,21 +107,21 @@ body{
 } */
 
 .ic {
-  width: 70%;
+  width: 60%;
   font-size: 0.8rem;
-  background: lightgreen;
+  background: green;
   border-radius: 1.5rem;
 }
 .nic {
-  width: 70%;
+  width: 60%;
   font-size: 0.8rem;
   border-radius: 1.5rem;
-  background: green;
+  background: var(--lightBlue);
 }
 .btc {
   font-size: 0.8rem;
   border-radius: 1.5rem;
-  background: var(--lightBlue);
+  background: linear-gradient(40deg,#ffd86f,#fc6262);
   width: 60%;
 }
 .cart-btn {
@@ -204,9 +191,7 @@ button:focus {
   
   
 }
-.nav-item a {
-  color: lightgreen !important;
-}
+
 /* .bbn {
   background-color: palevioletred !important;
 } */
@@ -226,12 +211,10 @@ button:focus {
   text-align: center;
 }
 
-.WithStyles\(ForwardRef\(ExpansionPanelDetails\)\)-root-81{
-  background: lightgreen;
-}
+
 
 .MuiPaper-root {
-  background: lightgreen !important;
+  background: linear-gradient(40deg,#ffd86f,#fc6262);
 }
 .footer li {
   list-style: none;
@@ -382,7 +365,7 @@ button:focus {
 @media screen and (max-width:420px) {
   .bbn {
     display:none;
-  }  
+  }
 }
 
 @media screen and (min-width:769px) {

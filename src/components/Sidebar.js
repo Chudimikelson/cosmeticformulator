@@ -40,9 +40,8 @@ export default class Sidebar extends Component {
 const NavWrapper = styled.nav`
 background: #fff;
 .nav-link {
-    color: palevioletred!important;
-    font-size: 1.3rem;
-    text-transform: capitalize;
+  font-size: 1.3rem;
+  text-transform: capitalize;
 }
 .mylogo  {
   height: 2rem;
