@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import { MDBNavbar, MDBDropdown,
-MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
+import { MDBNavbar, MDBDropdown,MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import {ProductConsumer} from '../Context';
 import ButtersMenu from "./c.OilsAndButters/ButtersMenu";
 import OilsMenu from './OilsMenu';
@@ -50,11 +48,11 @@ render() {
             </div>
             <div class="col-md-4">
               
-                <p class="dropdown-heading bold mt-0 pt-0">Essential Oils</p><a class="dropdown-item">Lavender Oil</a> <a class="dropdown-item">Orange</a> <a class="dropdown-item">Lemon</a>
+                <p class="dropdown-heading bold mt-0 pt-0">Essential Oils</p><button class="dropdown-item">Lavender Oil</button> <button class="dropdown-item">Orange</button> <button class="dropdown-item">Lemon</button>
              </div>
             <div class="col-md-4">
               
-                <p class="dropdown-heading bold mt-0 pt-0">Fragrance Oils</p><a class="dropdown-item">Frankincense</a> <a class="dropdown-item">Rose Bouquet</a> <a class="dropdown-item">Vanilla</a>
+                <p class="dropdown-heading bold mt-0 pt-0">Fragrance Oils</p><button class="dropdown-item">Frankincense</button> <button class="dropdown-item">Rose Bouquet</button> <button class="dropdown-item">Vanilla</button>
              </div>
             </div>
         </MDBDropdownMenu>

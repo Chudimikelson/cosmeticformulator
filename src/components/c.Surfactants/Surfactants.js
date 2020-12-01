@@ -5,9 +5,9 @@ import SuperMenu  from '../SuperMenu';
 import Tabs from '../Tabs';
 import Sizes from '../Sizes';
 import Featured from '../Featured';
-import SubmenuOilsButters from './SubmenuOilsButters';
+import SubmenuSurfactants from './SubmenuSurfactants';
 
-export default class AllButters extends Component {
+export default class Surfactants extends Component {
     
   render() {
     return (
@@ -22,7 +22,7 @@ export default class AllButters extends Component {
               <div className="rounded shadow container-fluid border py-4">
                 <div className="row">
                   <div className="col-12 col-md-3 bbn">
-                    <SubmenuOilsButters/>
+                    <SubmenuSurfactants/>
                 </div>
                   <div className="col-12 col-md-6">
                     <div className="row justify-content-between">

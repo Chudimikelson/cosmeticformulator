@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-  import { MDBContainer, MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
+  import { MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
 
   class TabsDefault extends Component {
     state = {

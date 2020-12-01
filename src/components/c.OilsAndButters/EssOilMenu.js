@@ -1,48 +1,24 @@
 import React, { Component } from 'react';
-import styled from "styled-components";
 import { ProductConsumer } from "../../Context";
 import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
 
-export default class ButtersMenu extends Component {
+export default class EssOilMenu extends Component {
   render() {
-    const { id, title } = this.props.buttersItem;
+    const { id, title } = this.props.EssOilItem;
     return (
-      <Btn>
         <ProductConsumer>
           {value => (
             <Link to="/OILS-and-BUTTERS" className="text-contrast lead" onClick={()=>{value.handleDetail(id)}}>{title}</Link>              
           )}
         </ProductConsumer>
-      </Btn>
     )
   }
 }
-ButtersMenu.propTypes = {
-  buttersItem: PropTypes.shape({
+EssOilMenu.propTypes = {
+  EssOilItem: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string
   }).isRequired
 };
 
-const Btn = styled.div `
-
-.finess {
-  position: relative;
-  bottom: 3rem;
-  left:0;
-}
-
-.small-text {
-  font-size: 1.2rem;
-}
-.cxx {
-  position relative;
-  bottom: 2rem;
-  color: palevioletred;
-}
-.card {
-  border: none;
-}
-
-`

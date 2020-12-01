@@ -46,6 +46,7 @@ export default class DeliveryFee extends Component {
 			"minna": 1500,
 			"jos": 2000,
 			"kaduna": 1500,
+			"adamawa": 2500,
 		};
 		result = lookup[location];
 		return result;

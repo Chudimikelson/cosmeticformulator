@@ -11,8 +11,8 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Helmet from 'react-helmet';
 import AllButters from './components/c.OilsAndButters/AllButters';
-import AllOils from './components/AllOils';
 import AllPowders from './components/AllPowders';
+import Surfactants from './components/c.Surfactants/Surfactants';
 
 class App extends Component {
   render() {
@@ -27,9 +27,9 @@ class App extends Component {
         <Navbar className='bbn'/> 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/BUTTERS" component={AllButters}/>
-          <Route path="/OILS" component={AllOils}/>
-          <Route path="/POWDERS" component={AllPowders}/>
+          <Route path="/OILS-and-BUTTERS" component={AllButters}/>
+          <Route path="/SURFACTANTS" component={Surfactants}/>
+          <Route path="/STABILIZERS" component={AllPowders}/>
           <Route path="/details" component={Details} />
           <Route path="/checkout" component={Checkout} />
           <Route component={Default} />

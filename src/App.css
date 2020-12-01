@@ -362,6 +362,14 @@ button:focus {
 .modal-body {
   padding: 1px !important;
 }
+
+.dropdown-item:hover {
+  background-color: #f8f9fa5c !important;
+}
+.dropdown-item:visited {
+  background-color: #ff9800d4 !important;
+}
+
 @media screen and (max-width:420px) {
   .bbn {
     display:none;

@@ -50,7 +50,7 @@ export default class Checkout extends Component {
       <ProductConsumer>
           {value =>{
             
-            const {cart,cartTotal,shipping, cartSubTotal,clearCart, discount} = value;
+            const {cart,cartTotal,shipping, cartSubTotal,clearCart} = value;
             const cartItems = cart.map(cartItem => cartItem.count + " " + cartItem.title);
             const maill = this.state.emaill;
             const phone = this.state.phone;

@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { MDBDropdownItem} from "mdbreact";
 import {ProductConsumer} from '../../Context.js';
-import ButtersMenu from './ButtersMenu';
+import BlenOilMenu from './EssOilMenu';
 
-export default class ButtersList extends Component {
+export default class BlenOilList extends Component {
   render (){
     
     return ( 
         <ProductConsumer>
           {value => {
             return value.products.filter(product => {
-              return product.category === "BUTTERS";
+              return product.category === "BLENDED OIL";
             }).map( product => {
               return <MDBDropdownItem className="shadow-hover">
-                <ButtersMenu key={product.id} buttersItem={product}/>
+                <BlenOilMenu key={product.id} BlenOilItem={product}/>
                 </MDBDropdownItem>;
             });
           }}
@@ -21,5 +21,3 @@ export default class ButtersList extends Component {
     )
   }
 }
-
-

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {ProductConsumer} from '../Context';
-import {Link} from 'react-router-dom';
-import styled from 'styled-components';
 import Menubar from './Menubar';
 import Breadcrumb  from './Breadcrumbs';
 import Tabs from './Tabs';
@@ -12,7 +10,7 @@ export default class AllPowders extends Component {
     return (
       <ProductConsumer>
         {(value)=>{
-          const {id,usage,description,img, life, contains, price, title,inCart, count,increment,decrement, category} = value.butterDetail;
+          const {id,usage,description,img, contains, price, title,inCart, count,increment,decrement, category} = value.butterDetail;
           return (
             <>
             <div className="bbn"><Menubar/></div>  
@@ -71,85 +69,3 @@ export default class AllPowders extends Component {
     )
   }
 }
-
-const EmptyWrapper = styled.div `
-
-.myaccordion-body {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-label {
-  cursor: pointer;
-}
-
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-input[type="radio"] {
-  position: absolute;
-  left: -9999px;
-}
-
-
-.myaccordion {
-  position: relative;
-  width: 100%;
-  min-height: 300px;
-  margin: 0 auto;
-  background: var(--accordion-color);
-  color: var(--white);
-}
-
-.myaccordion label {
-  text-align: center;
-}
-
-.myaccordion,
-.myaccordion li,
-.myaccordion .myaccordion-title {
-  display: flex;
-}
-
-.myaccordion li:not(:last-child) {
-  border: 1px solid var(--separator-color);
-}
-
-
-.myaccordion .myaccordion-title:hover {
-  color: var(--active-color);
-}
-
-
-.myaccordion .myaccordion-content {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  padding: 20px;
-}
-
-[value="Description"]:checked ~ .myaccordion [data-radio="description"],
-[value="Contains"]:checked ~ .myaccordion [data-radio="contains"],
-[value="Usage"]:checked ~ .myaccordion [data-radio="usage"],
-[value="Life"]:checked ~ .myaccordion [data-radio="life"] {
-  flex-grow: 1;
-}
-
-[value="Description"]:checked ~ .myaccordion [for="description"] + .myaccordion-content,
-[value="Contains"]:checked ~ .myaccordion [for="contains"] + .myaccordion-content,
-[value="Usage"]:checked ~ .myaccordion [for="usage"] + .myaccordion-content,
-[value="Life"]:checked ~ .myaccordion [for="life"] + .myaccordion-content {
-  display: flex;
-}
-
-[value="Description"]:checked ~ .myaccordion [for="description"],
-[value="Contains"]:checked ~ .myaccordion [for="contains"],
-[value="Usage"]:checked ~ .myaccordion [for="usage"],
-[value="Life"]:checked ~ .myaccordion [for="life"] {
-  color: var(--active-color);
-}
-`

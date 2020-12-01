@@ -9,7 +9,7 @@ const Banner = () => {
       <div className="swiper-container shop-home-slider">
         <div className="swiper-wrapper">
           <div className="swiper-slide">
-            <img className="rounded border" src={banner}/>
+            <img className="rounded border" alt="cosmetic formulator depot" src={banner}/>
           </div>    
         </div>
       </div>

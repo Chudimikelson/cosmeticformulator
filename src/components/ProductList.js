@@ -23,7 +23,9 @@ export default class ProductList extends Component {
             <div className="flex-containerz row">
               <ProductConsumer>
                 {value => {
-                  return value.products.map( product => {
+                  return value.products.filter(product => {
+                    return product.category === "BUTTERS";
+                  }).map( product => {
                     return <Products key={product.id} product={product}/>;
                   });
                 }}

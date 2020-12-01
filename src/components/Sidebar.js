@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import {Modal, ModalHeader, ModalBody} from 'reactstrap';
-import styled from 'styled-components';
 import Accordion from './Accordion';
 
 export default class Sidebar extends Component {
@@ -37,15 +35,3 @@ export default class Sidebar extends Component {
   }
 }
  
-const NavWrapper = styled.nav`
-background: #fff;
-.nav-link {
-  font-size: 1.3rem;
-  text-transform: capitalize;
-}
-.mylogo  {
-  height: 2rem;
-  width: 9rem;
-}
-
-`

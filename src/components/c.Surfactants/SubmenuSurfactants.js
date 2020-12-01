@@ -3,11 +3,11 @@ import { withStyles } from '@material-ui/core/styles';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ButtersList from './ButtersList';
-import EssOilList from './EssOilList';
-import CarrOilList from './CarrOilList';
-import FragOilList from './FragOilList';
-import BlenOilList from './BlenOilList';
+import Surfactants from './SurfactantsList';
+import Hydrosols from './SurfactantsList';
+import Solubilizers from './SurfactantsList';
+import Humectants from './SurfactantsList';
+import Adjusters from './SurfactantsList';
 
 
 const ExpansionPanel = withStyles({
@@ -62,42 +62,42 @@ export default function CustomizedExpansionPanels(props) {
     <div>
       <ExpansionPanel round expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel1d-content" id="panel1d-header">
-          BUTTERS
+          SURFACTANTS
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className='nav rounded'>
-            <ButtersList/>
+            <Surfactants/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel round expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel2d-content" id="panel2d-header">
-          ESSENTIAL OILS
+          HYDROSOLS
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className="nav rounded">
-          <EssOilList/>
+          <Hydrosols/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel round expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel3d-content" id="panel3d-header">
-          CARRIER OILS
+          SOLUBILIZERS
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className="nav rounded">
-          <CarrOilList/>
+          <Solubilizers/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel round expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel4d-content" id="panel4d-header">
-          FRAGRANCE OILS
+          HUMECTANTS
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className="nav rounded">
-          <FragOilList/>
+          <Humectants/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel round expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel5d-content" id="panel5d-header">
-          BLENDED OILS
+          PH ADJUSTERS
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className="nav rounded">
-          <BlenOilList/>
+          <Adjusters/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </div>

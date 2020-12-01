@@ -7,28 +7,28 @@ export default function NavMenu() {
         <div class="container py-4">
           <div class="collapse navbar-collapse ml-auto">
             <ul class="nav navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link" href="javascript:;">Home</a></li>
-              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown link</a>
-                  <div class="dropdown-menu p-3"><a class="dropdown-item" href="javascript:;">About</a> <a class="dropdown-item" href="javascript:;">Services</a> <a class="dropdown-item" href="javascript:;">Blog</a></div>
+              <li class="nav-item"><Link class="nav-link" to="/">Home</Link></li>
+              <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown link</button>
+                  <div class="dropdown-menu p-3"><button class="dropdown-item">About</button> <button class="dropdown-item">Services</button> <button class="dropdown-item">Blog</button></div>
               </li>
-              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:;">Right align</a>
+              <li class="nav-item dropdown"><button class="nav-link dropdown-toggle" data-toggle="dropdown" >Right align</button>
                 <div class="dropdown-menu dropdown-menu-right p-3">
-                  <a class="dropdown-item" href="javascript:;">About</a> 
-                  <a class="dropdown-item" href="javascript:;">Services</a> 
-                  <a class="dropdown-item" href="javascript:;">Blog</a>
+                  <button class="dropdown-item">About</button> 
+                  <button class="dropdown-item">Services</button> 
+                  <button class="dropdown-item">Blog</button>
                 </div>
               </li>
-              <li class="nav-item dropdown mega"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:;">Multi column</a>
+              <li class="nav-item dropdown mega"><button class="nav-link dropdown-toggle" data-toggle="dropdown">Multi column</button>
                 <div class="dropdown-menu dropdown-menu-right p-3">
                   <div class="row">
                     <div class="col-md-4">
-                        <p class="dropdown-heading bold mt-0 pt-0">Company</p><a class="dropdown-item" target="_blank" href="javascript:;">About</a> <a class="dropdown-item" target="_blank" href="javascript:;">Services</a> <a class="dropdown-item" target="_blank" href="javascript:;">Blog</a>
+                        <p class="dropdown-heading bold mt-0 pt-0">Company</p><button class="dropdown-item">About</button> <button class="dropdown-item">Services</button> <button class="dropdown-item">Blog</button>
                     </div>
                     <div class="col-md-4">
-                        <p class="dropdown-heading bold mt-0 pt-0">Product</p><a class="dropdown-item" target="_blank" href="javascript:;">Features</a> <a class="dropdown-item" target="_blank" href="javascript:;">Customers</a> <a class="dropdown-item" target="_blank" href="javascript:;">Documentation</a>
+                        <p class="dropdown-heading bold mt-0 pt-0">Product</p><button class="dropdown-item">Features</button> <button class="dropdown-item">Customers</button> <button class="dropdown-item">Documentation</button>
                     </div>
                     <div class="col-md-4">
-                        <p class="dropdown-heading bold mt-0 pt-0">Channels</p><a class="dropdown-item" target="_blank" href="javascript:;">Careers</a> <a class="dropdown-item" target="_blank" href="javascript:;">Contact</a> <a class="dropdown-item" target="_blank" href="javascript:;">Search</a>
+                        <p class="dropdown-heading bold mt-0 pt-0">Channels</p><button class="dropdown-item">Careers</button> <button class="dropdown-item">Contact</button> <button class="dropdown-item">Search</button>
                     </div>
                   </div>
                 </div>

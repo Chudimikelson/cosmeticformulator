@@ -4,7 +4,6 @@ import logo from '../cfd.png';
 import styled from 'styled-components';
 import Sidebar from './Sidebar';
 import { MDBNavbar,  MDBNavLink, MDBIcon, MDBCol } from "mdbreact";
-import MobileMenu from './MobileMenu';
 
 export default class Navbar extends Component {
   render() {
@@ -15,18 +14,18 @@ export default class Navbar extends Component {
             <div className="bbn d-flex justify-content-between mainGreen">
               <p className="font-xs text-contrast">important information to note</p>
               <MDBNavbar className="py-0">
-                <MDBNavLink className="text-contrast font-regular pr-0 mr-1">Connect with us</MDBNavLink>
-                <MDBNavLink className="waves-effect waves-light pt-0" to="#!">
+                <MDBNavLink to="/" className="text-contrast font-regular pr-0 mr-1">Connect with us</MDBNavLink>
+                <MDBNavLink className="waves-effect waves-light pt-0" to="/">
                   <MDBIcon fab icon="whatsapp" /></MDBNavLink>
-                <MDBNavLink className="waves-effect waves-light pt-0" to="#!">
+                <MDBNavLink className="waves-effect waves-light pt-0" to="/">
                   <MDBIcon fab icon="instagram" /></MDBNavLink>
-                <MDBNavLink className="waves-effect waves-light pt-0" to="#!">
+                <MDBNavLink className="waves-effect waves-light pt-0" to="/">
                   <MDBIcon fab icon="facebook" /></MDBNavLink>
-                <MDBNavLink className="waves-effect waves-light pt-0" to="#!">
+                <MDBNavLink className="waves-effect waves-light pt-0" to="/">
                     <MDBIcon fab icon="twitter" /></MDBNavLink>
-                <MDBNavLink className="waves-effect waves-light pt-0" to="#!">
+                <MDBNavLink className="waves-effect waves-light pt-0" to="/">
                   <MDBIcon fab icon="telegram" /></MDBNavLink><hr/>
-                <MDBNavLink className="text-contrast font-regular">Chat Us</MDBNavLink>
+                <MDBNavLink to="/" className="text-contrast font-regular">Chat Us</MDBNavLink>
               </MDBNavbar>
             </div>
           </div>

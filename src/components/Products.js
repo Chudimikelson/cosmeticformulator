@@ -46,9 +46,7 @@ export default class Products extends Component {
               </div>
             )}
           </ProductConsumer>
-          {/* card footer*/}
-        
-      </ProductWrapper>
+        </ProductWrapper>
     );
   }
 }
