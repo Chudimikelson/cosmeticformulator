@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {storeProducts, detailProduct, detailCat, collectionDetail, bestsellerProducts, collections, lookup, butters,oils, butterDetail, oilDetail} from './data';
+import {storeProducts, detailProduct, lookup} from './data';
 
 
 const ProductContext = React.createContext();
@@ -14,15 +14,7 @@ class ProductProvider extends Component {
   }
     state ={
         products: [],
-        bestsellers: [],
-        collections: [],
-        buttersList: [],
-        oilsList: [],
-        butterDetail: butterDetail,
-        oilDetail: oilDetail,
         detailProduct:detailProduct,
-        detailCat:detailCat,
-        collectionDetail:collectionDetail,
         cart: [],
         modalOpen: false,
         sidebarOpen: false,
@@ -36,10 +28,6 @@ class ProductProvider extends Component {
     };
     componentDidMount(){
       this.setProducts();
-      this.setBestsellers();
-      this.setCollections();
-      this.setButters();
-      this.setOils();
     }
     setProducts = () => {
       let tempProducts = [];
@@ -51,89 +39,11 @@ class ProductProvider extends Component {
         return {products: tempProducts};
       });
     };
-    setButters = () => {
-      let tempButters = [];
-      butters.forEach(item => {
-        const oneItem = {...item};
-        tempButters = [...tempButters, oneItem];
-      });
-      this.setState(() =>{
-        return {buttersList: tempButters};
-      });
-    };
-    getButterItem = (id) =>{
-      const butterItem = this.state.buttersList.find(item => item.id === id);
-      return butterItem;
-    }
-    showButterItemDetails = id => {
-      const butterItemDetail = this.getButterItem(id);
-      this.setState(()=> {
-        return {butterDetail: butterItemDetail}
-      });
-    };
-    setOils = () => {
-      let tempoils = [];
-      oils.forEach(item => {
-        const oneItem = {...item};
-        tempoils = [...tempoils, oneItem];
-      });
-      this.setState(() =>{
-        return {oilsList: tempoils};
-      });
-    };
-    getOilItem = (id) =>{
-      const OilItem = this.state.oilsList.find(item => item.id === id);
-      return OilItem;
-    }
-    showOilItemDetails = id => {
-      const oilItemDetail = this.getOilItem(id);
-      this.setState(()=> {
-        return {oilDetail: oilItemDetail}
-      });
-    };
-
-    setBestsellers = () => {
-      let tempBestsellerProducts = [];
-      bestsellerProducts.forEach(item => {
-        const oneItem = {...item};
-        tempBestsellerProducts = [...tempBestsellerProducts, oneItem];
-      });
-      this.setState(() => {
-        return {bestsellers: tempBestsellerProducts};
-      });
-    };
-
-    setCollections = () => {
-      let tempCollections = [];
-      collections.forEach(item => {
-        const oneItem = {...item};
-        tempCollections = [...tempCollections, oneItem];
-      });
-      this.setState(() => {
-        return {collections: tempCollections};
-      });
-    };
+ 
     getItem = (id) => {
       const product = this.state.products.find(item => item.id ===id);
       return product;
     }
-
-    getbestsellers = (id) => {
-      const bs = this.state.bestsellers.find(item => item.id === id);
-      return bs;
-    }
-
-    getcollection = (id) => {
-      const clxt = this.state.collections.find(item => item.id === id);
-      return clxt;
-    }
-
-    handleDetailx = id => {
-      const bs = this.getbestsellers(id);
-      this.setState(() => {
-        return {detailCat:bs}
-      })
-  };  
 
     handleDetail = id => {
         const product = this.getItem(id);
@@ -141,15 +51,6 @@ class ProductProvider extends Component {
           return {detailProduct:product}
         })
     };
-
-    handleCollectionDetail = id => {
-      const clxt = this.getcollection(id);
-      this.setState(() => {
-        return {collectionDetail:clxt}
-      })
-  };
-
-
 
     addToCart = (id) => {
         let tempProducts = [...this.state.products];
@@ -165,36 +66,6 @@ class ProductProvider extends Component {
           this.addTotals();
         });
     };
-
-    addBsToCart = (id) => {
-      let tempButters = [...this.state.buttersList];
-      const posit = tempButters.indexOf(this.getButterItem(id));
-      const bs = tempButters[posit];
-      bs.inCart = true;
-      bs.count = 1;
-      const price = bs.price;
-      bs.total = price;
-      this.setState(() => {
-        return {buttersList:tempButters, cart:[...this.state.cart, bs]};
-      }, () => {
-        this.addTotals();
-      });
-  };
-
-  addCollectionToCart = (id) => {
-    let tempCollections = [...this.state.collections];
-    const position = tempCollections.indexOf(this.getcollection(id));
-    const clxt = tempCollections[position];
-    clxt.inCart = true;
-    clxt.count = 1;
-    const price = clxt.price;
-    clxt.total = price;
-    this.setState(() => {
-      return {collections:tempCollections, cart:[...this.state.cart, clxt]};
-    }, () => {
-      this.addTotals();
-    }); 
-};
     
     openModal = id => {
     const product = this.getItem(id);
@@ -250,38 +121,21 @@ class ProductProvider extends Component {
   };
   removeItem = (id) => {
     let tempProducts = [...this.state.products];
-    let tempbs = [...this.state.bestsellers];
-    let tempCollectxn = [...this.state.collections];
     let tempCart = [...this.state.cart];
     tempCart = tempCart.filter(item => item.id!==id);
     const index = tempProducts.indexOf(this.getItem(id));
-    let posit = tempbs.indexOf(this.getbestsellers(id));
-    let position = tempCollectxn.indexOf(this.getcollection(id));
     
     let removedProduct = tempProducts[index];
-    let removedbs = tempbs[posit];
-    let removedclxt = tempCollectxn[position];
     if (removedProduct)  {
       removedProduct.inCart = false;
       removedProduct.count = 0;
       removedProduct.total = 0;
-    } else if (removedbs) {
-      removedbs.inCart = false;
-      removedbs.count = 0;
-      removedbs.total = 0;
-    } else if (removedclxt) {
-      removedclxt.inCart = false;
-      removedclxt.count = 0;
-      removedclxt.total = 0;
-    }
-    
+    } 
 
     this.setState(() => {
       return {
         cart:[...tempCart],
-        products:[...tempProducts],
-        bestsellers: [...tempbs],
-        collections: [...tempCollectxn]
+        products:[...tempProducts]
       };
     }, () => {this.addTotals();
     });
@@ -291,8 +145,6 @@ class ProductProvider extends Component {
       return {cart:[]};
     }, () => {
       this.setProducts();
-      this.setBestsellers();
-      this.setCollections();
       this.addTotals();
     });
   };
@@ -350,11 +202,7 @@ class ProductProvider extends Component {
         return (
             <ProductContext.Provider value={{...this.state,
                 handleDetail:this.handleDetail,
-                handleDetailx:this.handleDetailx,
-                handleCollectionDetail:this.handleCollectionDetail,
                 addToCart:this.addToCart,
-                addBsToCart:this.addBsToCart,
-                addCollectionToCart:this.addCollectionToCart,
                 getLocation:this.getLocation,
                 getMethod:this.getMethod,
                 openModal:this.openModal,
@@ -362,9 +210,7 @@ class ProductProvider extends Component {
                 increment:this.increment,
                 decrement:this.decrement,
                 removeItem:this.removeItem,
-                clearCart:this.clearCart,
-                showButterItemDetails:this.showButterItemDetails,
-                showOilItemDetails:this.showOilItemDetails
+                clearCart:this.clearCart
             }}>
                 {this.props.children}
             </ProductContext.Provider>

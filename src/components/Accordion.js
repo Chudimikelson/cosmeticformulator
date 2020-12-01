@@ -6,6 +6,7 @@ import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import { MDBDropdownItem } from "mdbreact";
 import { Link } from 'react-router-dom';
+import ButtersList from './c.OilsAndButters/ButtersList';
 
 
 const ExpansionPanel = withStyles({
@@ -63,9 +64,7 @@ export default function CustomizedExpansionPanels(props) {
           <Typography>BUTTERS</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className="nav">
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Shea Butter</Link></MDBDropdownItem>
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Mango Butter</Link></MDBDropdownItem>
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Cocoa Butter</Link></MDBDropdownItem>
+          <ButtersList/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
