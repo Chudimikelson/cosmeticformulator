@@ -7,7 +7,7 @@ import React, { Component } from 'react';
       
       
       state = {
-    		key: "pk_live_b97cbd17c62656f4b7d6363828d322aac8826b70", //PAYSTACK PUBLIC KEY
+    		key: "pk_test_8d7bbe3cc26423aad8bac6a494d563c1a164f0a1", //PAYSTACK PUBLIC KEY
         email: "customer email",  
         
     		metadata: {
