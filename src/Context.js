@@ -3,14 +3,13 @@ import {storeProducts, detailProduct, lookup} from './data';
 
 
 const ProductContext = React.createContext();
-//Provider
-//Consumer
 
 class ProductProvider extends Component {
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.getLocation = this.getLocation.bind(this);
     this.getMethod = this.getMethod.bind(this);
+    this.getSize = this.getSize.bind(this);
   }
     state ={
         products: [],
@@ -24,7 +23,8 @@ class ProductProvider extends Component {
         cartTotal:0,
         location: "Abuja",
 			  method: 'regular',
-        shipping:1000
+        shipping:1000,
+        size: 0
     };
     componentDidMount(){
       this.setProducts();
@@ -39,7 +39,7 @@ class ProductProvider extends Component {
         return {products: tempProducts};
       });
     };
- 
+
     getItem = (id) => {
       const product = this.state.products.find(item => item.id ===id);
       return product;
@@ -51,14 +51,20 @@ class ProductProvider extends Component {
           return {detailProduct:product}
         })
     };
-
+    getSize = (e) => {
+      console.log(e.target.value);
+      let size= e.target.value;
+      this.setState(()=>{
+        return {size: size};
+      });
+    }
     addToCart = (id) => {
         let tempProducts = [...this.state.products];
         const index = tempProducts.indexOf(this.getItem(id));
         const product = tempProducts[index];
         product.inCart = true;
         product.count = 1;
-        const price = product.price;
+        const price = this.state.size;
         product.total = price;
         this.setState(() => {
           return {products:tempProducts, cart:[...this.state.cart, product]};
@@ -210,7 +216,8 @@ class ProductProvider extends Component {
                 increment:this.increment,
                 decrement:this.decrement,
                 removeItem:this.removeItem,
-                clearCart:this.clearCart
+                clearCart:this.clearCart,
+                getSize:this.getSize
             }}>
                 {this.props.children}
             </ProductContext.Provider>

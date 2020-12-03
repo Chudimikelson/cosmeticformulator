@@ -3,18 +3,17 @@ import {ProductConsumer} from '../../Context';
 import {Link} from 'react-router-dom';
 import SuperMenu  from '../SuperMenu';
 import Tabs from '../Tabs';
-import Sizes from '../Sizes';
 import Featured from '../Featured';
 import SubmenuOilsButters from './SubmenuOilsButters';
 
-export default class AllButters extends Component {
+export default class AllButters extends Component {  
     
   render() {
     return (
       <>
       <ProductConsumer>
         {(value)=>{
-          const {id,usage,description,img, contains,count, price, title,inCart, mini, regular, large} = value.detailProduct;
+          let {id,usage,description,img, contains,count, price, title,inCart, mini, regular, large} = value.detailProduct;
           return (
             <div className="container-fluid">
             <div className="bbn"><SuperMenu/></div>
@@ -29,8 +28,43 @@ export default class AllButters extends Component {
                       <h2 className="page-title font-weight-bold col-12">{title}</h2>
                       <img src={img} className="col-md-6 img-fluid collection-image border-md rounded shadow" alt="product"/>
                       <div className="col-md-5">
-                        <div className="row pt-4 pt-md-0">
-                          <Sizes mini={mini} regular={regular} large={large}/>
+                        <div className="row pt-4 pt-md-0"><div className=""onChange={(e)=> value.getSize(e)}>
+        <input type="radio" name="size" value={mini}/>
+        <input type="radio" name="size" value={regular}/>
+        <input type="radio" name="size" value={large}/>
+      </div>
+                          <div className="d-none flex-wrap">
+      <div className="page-title w-100">Sizes:</div>
+      
+      <div className="card-body w-60 mx-auto rounded border mb-1">
+        <div className="d-flex justify-content-between align-items-sm-center">
+          <div className="radio radio-primary" >
+            <input className="form-control" type="radio" id="mini" name="size" value="mini"/> <label className="control-label text-darker" htmlFor="mini">250ml</label></div>
+          <div className="ml-sm-auto"><span className="font-sm text-primary">N{mini}</span></div>
+        </div>
+      </div>
+      <div className="card-body w-50 rounded border mb-1">
+        <div className="d-flex justify-content-between align-items-sm-center">
+          <div  className="radio radio-primary" onChange={this.onChangeValue}>
+            <input className="form-control" type="radio" id="regular" name="size" value="regular"/> <label className="control-label text-darker" htmlFor="regular">500ml</label></div>
+          <div className="ml-sm-auto"><span className="font-sm text-primary">N{regular}</span></div>
+        </div>
+      </div>
+      <div className="card-body w-70 rounded border mb-1">
+        <div className="d-flex justify-content-between align-items-sm-center">
+          <div className="radio radio-primary" onChange={(e)=> value.getSize(e)}>
+            <input className="form-control" type="radio" id="large" name="size" value="large"/> <label className="control-label text-darker" htmlFor="large">1 litre</label></div>
+          <div className="ml-sm-auto"><span className="font-sm text-primary">N{large}</span></div>
+        </div>
+      </div>
+      <div className="card-body w-70 rounded border">
+        <div className="d-flex justify-content-between align-items-sm-center">
+          <div className=""> <label className="control-label text-darker" for="more">4 litres or more</label></div>
+          <div className="ml-sm-auto"><span className="font-sm text-primary">Contact us for bulk orders</span></div>
+        </div>
+      </div>
+    </div>
+ 
                           <div className="col-12 col-md-6 pt-md-4">Quantity:
       <div className="d-flex def-number-input number-input">
         <input type="text" className="form-control mx-2" disabled placeholder= {count} aria-label="count" aria-describedby="basic-addon" />
