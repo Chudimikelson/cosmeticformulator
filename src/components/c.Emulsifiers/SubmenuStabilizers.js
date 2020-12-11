@@ -4,10 +4,10 @@ import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Emulsifiers from './EmulsifiersList';
-import Stabilizers from './EmulsifiersList';
-import Waxes from './EmulsifiersList';
-import Thickners from './EmulsifiersList';
-import Bases from './EmulsifiersList';
+import Stabilizers from './StabList';
+import Waxes from './WaxList';
+import Thickners from './ThickList';
+import Bases from './BaseList';
 
 
 const ExpansionPanel = withStyles({

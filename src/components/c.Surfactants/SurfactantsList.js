@@ -10,7 +10,7 @@ export default class SurfactantsList extends Component {
         <ProductConsumer>
           {value => {
             return value.products.filter(product => {
-              return product.category === "ESSENTIAL OIL";
+              return product.category === "SURFACTANT";
             }).map( product => {
               return <MDBDropdownItem className="shadow-hover">
                 <SurfactantsMenu key={product.id} SurfItem={product}/>

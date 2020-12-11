@@ -3,20 +3,20 @@ import { ProductConsumer } from "../../Context";
 import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
 
-export default class SurfactantsMenu extends Component {
+export default class ExfoMenu extends Component {
   render() {
-    const { id, title } = this.props.SurfItem;
+    const { id, title } = this.props.exfoItem;
     return (
         <ProductConsumer>
           {value => (
-            <Link to="/SURFACTANTS" className="text-contrast" onClick={()=>{value.handleDetail(id)}}>{title}</Link>              
+            <Link to="/POWDERS-and-EXTRACTS" className="text-contrast lead" onClick={()=>{value.handleDetail(id)}}>{title}</Link>              
           )}
         </ProductConsumer>
     )
   }
 }
-SurfactantsMenu.propTypes = {
-  SurfItem: PropTypes.shape({
+ExfoMenu.propTypes = {
+  exfoItem: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string
   }).isRequired

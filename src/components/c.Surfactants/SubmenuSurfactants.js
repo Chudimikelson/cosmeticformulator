@@ -4,10 +4,10 @@ import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Surfactants from './SurfactantsList';
-import Hydrosols from './SurfactantsList';
-import Solubilizers from './SurfactantsList';
-import Humectants from './SurfactantsList';
-import Adjusters from './SurfactantsList';
+import Hydrosols from './HydroList';
+import Solubilizers from './SolubsList';
+import Humectants from './HumecList';
+import Adjusters from './AdjusList';
 
 
 const ExpansionPanel = withStyles({

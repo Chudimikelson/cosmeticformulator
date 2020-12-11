@@ -10,7 +10,7 @@ export default class PowdersList extends Component {
         <ProductConsumer>
           {value => {
             return value.products.filter(product => {
-              return product.category === "ESSENTIAL OIL";
+              return product.category === "POWDER";
             }).map( product => {
               return <MDBDropdownItem className="shadow-hover">
                 <PowdersMenu key={product.id} PowdItem={product}/>

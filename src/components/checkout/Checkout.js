@@ -73,7 +73,7 @@ export default class Checkout extends Component {
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb small no-decor-links">
                             <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                            <li className="breadcrumb-item"><Link to="/shop">Shop</Link></li>
+                            <li className="breadcrumb-item"><Link to="/OILS-and-BUTTERS">Continue Shopping</Link></li>
                             <li className="breadcrumb-item active" aria-current="page">Cart</li>
                         </ol>
                     </nav>

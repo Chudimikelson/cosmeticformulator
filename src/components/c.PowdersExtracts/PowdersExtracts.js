@@ -3,7 +3,6 @@ import {ProductConsumer} from '../../Context';
 import {Link} from 'react-router-dom';
 import SuperMenu  from '../SuperMenu';
 import Tabs from '../Tabs';
-import Sizes from '../Sizes';
 import Featured from '../Featured';
 import SubmenuPowdersExtract from './SubmenuPowdersExtract';
 
@@ -30,20 +29,45 @@ export default class PowdersExtracts extends Component {
                       <img src={img} className="col-md-6 img-fluid collection-image border-md rounded shadow" alt="product"/>
                       <div className="col-md-5">
                         <div className="row pt-4 pt-md-0">
-                          <Sizes mini={mini} regular={regular} large={large}/>
-                          <div className="col-12 col-md-6 pt-md-4">Quantity:
-      <div className="d-flex def-number-input number-input">
-        <input type="text" className="form-control mx-2" disabled placeholder= {count} aria-label="count" aria-describedby="basic-addon" />
+                        <div  onChange={(e)=>value.getSize(e)}className="d-flex flex-wrap">
+      <div className="page-title w-100">Sizes:</div>
+      <div className="card-body w-60 mx-auto rounded border mb-1">
+        <div className="d-flex justify-content-between align-items-sm-center">
+          <div className="radio radio-primary" >
+            <input className="form-control" type="radio" id="mini" name="size" value={mini}/> <label className="control-label text-darker" htmlFor="mini">250ml</label></div>
+          <div className="ml-sm-auto"><span className="font-sm text-primary">N{mini}</span></div>
+        </div>
+      </div>
+      <div className="card-body w-50 rounded border mb-1">
+        <div className="d-flex justify-content-between align-items-sm-center">
+          <div  className="radio radio-primary">
+            <input className="form-control" type="radio" id="regular" name="size" value={regular}/> <label className="control-label text-darker" htmlFor="regular">500ml</label></div>
+          <div className="ml-sm-auto"><span className="font-sm text-primary">N{regular}</span></div>
+        </div>
+      </div>
+      <div className="card-body w-70 rounded border mb-1">
+        <div className="d-flex justify-content-between align-items-sm-center">
+          <div className="radio radio-primary">
+            <input className="form-control" type="radio" id="large" name="size" value={large}/> <label className="control-label text-darker" htmlFor="large">1 litre</label></div>
+          <div className="ml-sm-auto"><span className="font-sm text-primary">N{large}</span></div>
+        </div>
+      </div>
+      <div className="card-body w-70 rounded border">
+        <div className="d-flex justify-content-between align-items-sm-center">
+          <div className=""> <label className="control-label text-darker" for="more">4 litres or more</label></div>
+          <div className="ml-sm-auto"><span className="font-sm text-primary">Contact us for bulk orders</span></div>
+        </div>
       </div>
     </div>
-                          <div className="col-12 col-md-6 pt-md-4">Price:
+                         
+                          <div className="col-12 pt-md-4">Price:
                             <div className="input-group">
                               <div className="input-group-prepend">
                                 <span className="input-group-text" id="basic-addon">
                                   <i className="">&#8358;</i>
                                 </span>
                               </div>
-                              <input type="text" className="form-control" disabled placeholder= {price} aria-label="Username" aria-describedby="basic-addon" />
+                              <input type="text" className="form-control" disabled placeholder= {value.selected} aria-label="Username" aria-describedby="basic-addon" />
                             </div>
                           </div>
                           <button className="cart-btn text-center text-tit py-0 px-0 mt-4"

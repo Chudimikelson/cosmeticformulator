@@ -10,7 +10,7 @@ export default class CosmeList extends Component {
         <ProductConsumer>
           {value => {
             return value.products.filter(product => {
-              return product.category === "BUTTERS";
+              return product.category === "COSMECEUTICAL";
             }).map( product => {
               return <MDBDropdownItem className="shadow-hover">
                 <CosmeMenu key={product.id} cosmeItem={product}/>

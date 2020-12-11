@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {storeProducts, detailProduct, lookup} from './data';
-
+import {detailProduct, lookup} from './data';
+import {storeProducts} from './datab';
 
 const ProductContext = React.createContext();
 
@@ -24,7 +24,7 @@ class ProductProvider extends Component {
         location: "Abuja",
 			  method: 'regular',
         shipping:1000,
-        size: 0
+        selected: 0
     };
     componentDidMount(){
       this.setProducts();
@@ -53,9 +53,9 @@ class ProductProvider extends Component {
     };
     getSize = (e) => {
       console.log(e.target.value);
-      let size= e.target.value;
+      let selected= parseInt(e.target.value);
       this.setState(()=>{
-        return {size: size};
+        return {selected: selected};
       });
     }
     addToCart = (id) => {
@@ -64,8 +64,14 @@ class ProductProvider extends Component {
         const product = tempProducts[index];
         product.inCart = true;
         product.count = 1;
-        const price = this.state.size;
+        product.price = this.state.selected;
+        const price = product.price;
         product.total = price;
+        if (this.state.selected == product.mini){
+        
+          console.log(product.size.mini);
+          product.size= product.size.mini;
+        }
         this.setState(() => {
           return {products:tempProducts, cart:[...this.state.cart, product]};
         }, () => {

@@ -3,9 +3,9 @@ import { ProductConsumer } from "../../Context";
 import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
 
-export default class SurfactantsMenu extends Component {
+export default class HumecMenu extends Component {
   render() {
-    const { id, title } = this.props.SurfItem;
+    const { id, title } = this.props.HumecItem;
     return (
         <ProductConsumer>
           {value => (
@@ -15,8 +15,8 @@ export default class SurfactantsMenu extends Component {
     )
   }
 }
-SurfactantsMenu.propTypes = {
-  SurfItem: PropTypes.shape({
+HumecMenu.propTypes = {
+  HumecItem: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string
   }).isRequired

@@ -63,7 +63,7 @@ export default function CustomizedExpansionPanels(props) {
         <ExpansionPanelSummary className="footer-panels" aria-controls="panel1d-content" id="panel1d-header">
           <Typography>BUTTERS</Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails className="nav">
+        <ExpansionPanelDetails className="nav" onClick={() => props.toggle()}>
           <ButtersList/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -71,10 +71,10 @@ export default function CustomizedExpansionPanels(props) {
         <ExpansionPanelSummary className="footer-panels" aria-controls="panel2d-content" id="panel2d-header">
           <Typography>POWDERS</Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails className="nav">
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Niacinamide</Link></MDBDropdownItem>
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Kojic</Link></MDBDropdownItem>
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/butters'>Mango Butter</Link></MDBDropdownItem>
+        <ExpansionPanelDetails className="nav" onClick={() => props.toggle()}>
+          <MDBDropdownItem><Link to='/oils-and-butters'>Niacinamide</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils-and-butters'>Kojic</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils-and-butters'>Mango Butter</Link></MDBDropdownItem>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
@@ -82,9 +82,9 @@ export default function CustomizedExpansionPanels(props) {
           <Typography>ESSENTIAL OILS</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className="nav">
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Lavender E/Oil</Link></MDBDropdownItem>
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Rosemary E/Oil</Link></MDBDropdownItem>
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Orange E/Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils-and-butters'>Lavender E/Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils-and-butters'>Rosemary E/Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils-and-butters'>Orange E/Oil</Link></MDBDropdownItem>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
@@ -92,9 +92,9 @@ export default function CustomizedExpansionPanels(props) {
           <Typography>CARRIER OILS</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className="nav">
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Carrot Oil</Link></MDBDropdownItem>
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Sunflower Oil</Link></MDBDropdownItem>
-          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils'>Olive Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils-and-butters'>Carrot Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils-and-butters'>Sunflower Oil</Link></MDBDropdownItem>
+          <MDBDropdownItem onClick={() => props.toggle()}><Link to='/oils-and-butters'>Olive Oil</Link></MDBDropdownItem>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel square expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>

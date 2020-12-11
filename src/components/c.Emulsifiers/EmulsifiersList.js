@@ -10,7 +10,7 @@ export default class EmulsifiersList extends Component {
         <ProductConsumer>
           {value => {
             return value.products.filter(product => {
-              return product.category === "ESSENTIAL OIL";
+              return product.category === "EMULSIFIER";
             }).map( product => {
               return <MDBDropdownItem className="shadow-hover">
                 <EmulsifiersMenu key={product.id} EmulItem={product}/>

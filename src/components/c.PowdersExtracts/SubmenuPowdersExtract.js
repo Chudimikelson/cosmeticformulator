@@ -4,9 +4,9 @@ import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Powders from './PowdersList';
-import Clays from './PowdersList';
-import Exfoliants from './PowdersList';
-import Extracts from './PowdersList';
+import Clays from './ClayList';
+import Exfoliants from './ExfoList';
+import Extracts from './ExtractList';
 
 
 const ExpansionPanel = withStyles({
