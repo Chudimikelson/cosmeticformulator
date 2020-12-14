@@ -13,7 +13,7 @@ export default class ActivesPreservatives extends Component {
       <>
       <ProductConsumer>
         {(value)=>{
-          const {id,usage,description,img, contains,count, price, title,inCart, mini, regular, large} = value.detailProduct;
+          const {id,usage,description,img, contains, title,inCart, mini, regular, large} = value.detailProduct;
           return (
             <div className="container-fluid">
             <div className="bbn"><SuperMenu/></div>
@@ -67,7 +67,7 @@ export default class ActivesPreservatives extends Component {
                                   <i className="">&#8358;</i>
                                 </span>
                               </div>
-                              <input type="text" className="form-control" disabled placeholder= {price} aria-label="Username" aria-describedby="basic-addon" />
+                              <input type="text" className="form-control" disabled placeholder= {value.selected} aria-label="Username" aria-describedby="basic-addon" />
                             </div>
                           </div>
                           <button className="cart-btn text-center text-tit py-0 px-0 mt-4"

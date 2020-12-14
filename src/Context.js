@@ -45,11 +45,15 @@ class ProductProvider extends Component {
       return product;
     }
 
-    handleDetail = id => {
+    handleDetail = (id) => {
         const product = this.getItem(id);
         this.setState(() => {
           return {detailProduct:product}
-        })
+        },() => {
+          this.setState(()=>{
+            return {selected:0}
+          });
+        });
     };
     getSize = (e) => {
       console.log(e.target.value);
@@ -67,11 +71,13 @@ class ProductProvider extends Component {
         product.price = this.state.selected;
         const price = product.price;
         product.total = price;
-        if (this.state.selected == product.mini){
-        
-          console.log(product.size.mini);
+        if (this.state.selected === product.mini){
           product.size= product.size.mini;
-        }
+        } else if (this.state.selected === product.midi){
+          product.size=product.size.midi;
+        }else if (this.state.selected === product.regular){
+          product.size=product.size.regular;
+        }else product.size=product.size.large;
         this.setState(() => {
           return {products:tempProducts, cart:[...this.state.cart, product]};
         }, () => {

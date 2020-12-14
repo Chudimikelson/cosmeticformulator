@@ -15,6 +15,7 @@ import Surfactants from './components/c.Surfactants/Surfactants';
 import EmulStabilizers from './components/c.Emulsifiers/EmulStabilizers';
 import PowdersExtracts from './components/c.PowdersExtracts/PowdersExtracts';
 import ActivesPreservatives from './components/c.ActivesPreservatives/ActivesPreservatives';
+import OilsCategory from './components/AllOils';
 
 class App extends Component {
   render() {
@@ -33,6 +34,7 @@ class App extends Component {
           <Route path="/STABILIZERS" component={EmulStabilizers}/>
           <Route path="/POWDERS-and-EXTRACTS" component={PowdersExtracts}/>
           <Route path="/ACTIVES-and-PRESERVATIVES" component={ActivesPreservatives}/>
+          <Route path="/OILS-CATEGORY" component={OilsCategory}/>
           <Route path="/details" component={Details} />
           <Route path="/checkout" component={Checkout} />
           <Route component={Default} />

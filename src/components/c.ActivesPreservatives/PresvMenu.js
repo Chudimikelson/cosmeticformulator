@@ -3,20 +3,20 @@ import { ProductConsumer } from "../../Context";
 import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
 
-export default class CarrOilMenu extends Component {
+export default class PresvMenu extends Component {
   render() {
-    const { id, title } = this.props.CarrOilItem;
+    const { id, title } = this.props.presvItem;
     return (
         <ProductConsumer>
           {value => (
-            <Link to="/OILS-and-BUTTERS" className="text-contrast lead" onClick={()=>{value.handleDetail(id)}}>{title}</Link>              
+            <Link to="/ACTIVES-and-PRESERVATIVES" className="text-contrast lead" onClick={()=>{value.handleDetail(id)}}>{title}</Link>              
           )}
         </ProductConsumer>
     )
   }
 }
-CarrOilMenu.propTypes = {
-  CarrOilItem: PropTypes.shape({
+PresvMenu.propTypes = {
+  presvItem: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string
   }).isRequired

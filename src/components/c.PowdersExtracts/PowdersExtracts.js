@@ -13,7 +13,7 @@ export default class PowdersExtracts extends Component {
       <>
       <ProductConsumer>
         {(value)=>{
-          const {id,usage,description,img, contains,count, price, title,inCart, mini, regular, large} = value.detailProduct;
+          const {id,usage,description,img, contains, title,inCart, mini, regular, large} = value.detailProduct;
           return (
             <div className="container-fluid">
             <div className="bbn"><SuperMenu/></div>

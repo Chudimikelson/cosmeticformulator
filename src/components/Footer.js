@@ -26,16 +26,16 @@ export default class Footer extends Component {
                         <div className="col-md-3">
                             <h6 className="bold text-left">Contact Us</h6>
                             <nav className="nav">
-                                <div className="d-flex"><i className="fas fa-map-marker mr-2"></i> 123 Street St, Your City, YC Your Country</div>
-                                <div className="mt-2 d-flex align-items-center"><i className="fas fa-phone mr-2"></i> (123) 456-7890</div>
+                                <div className="d-flex"><i className="fas fa-map-marker mr-2 mainGreen p-2 rounded"></i> 123 Street St, Your City</div>
+                                <div className="mt-2 d-flex align-items-center"><i className="fas fa-phone mr-2 mainGreen p-2 rounded"></i> (123) 456-7890</div>
                             </nav>
                         </div>
                     </div>
                 </div>
                 <hr className="mt-5"/>
-                <nav className="bg-dark nav social-icons justify-content-center small mt-4"><Link to="/" className="mr-3 font-regular text-secondary"><i className="fab fa-facebook-f"></i></Link> <Link to="/" className="mr-3 font-regular text-secondary"><i className="fab fa-twitter"></i></Link> <Link to="/" className="mr-3 font-regular text-secondary"><i className="fab fa-instagram"></i></Link> <Link to="/" className="mr-3 font-regular text-secondary"><i className="fas fa-rss"></i></Link> <Link to="/" className="font-regular text-secondary"><i className="fab fa-linkedin-in"></i></Link></nav>
-                <p className="brand bold copyright text-secondary text-center">Copyright © 2020 Cosmetic Formulator Depot.</p>
-                <p className="small text-secondary text-center"><em>Design by</em><Link to="/">Blackgene Development</Link></p>
+                <nav className="bg-dark nav social-icons justify-content-center small mt-4"><Link to="/" className="mr-3 font-regular text-secondary"><i className="fab fa-facebook-f"></i></Link> <Link to="/" className="mr-3 font-regular text-secondary"><i className="fab fa-twitter"></i></Link> <Link to="/" className="mr-3 font-regular text-secondary"><i className="fab fa-instagram"></i></Link> <Link to="/" className="mr-3 font-regular text-secondary"><i className="fab fa-whatsapp"></i></Link> <Link to="/" className="font-regular text-secondary"><i className="fab fa-telegram"></i></Link></nav>
+                <p className="mt-3 brand bold copyright text-secondary text-center">Copyright © 2020 Cosmetic Formulator Depot.</p>
+                <p className="small text-secondary text-center"><em>Design by</em><Link className="ml-1" to="/">Blackgene Development</Link></p>
             </footer>
     )
   }

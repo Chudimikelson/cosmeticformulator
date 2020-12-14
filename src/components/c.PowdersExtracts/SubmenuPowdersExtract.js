@@ -59,7 +59,7 @@ export default function CustomizedExpansionPanels(props) {
   
   return (
     <div>
-      <ExpansionPanel round expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel1d-content" id="panel1d-header">
           POWDERS
         </ExpansionPanelSummary>
@@ -67,7 +67,7 @@ export default function CustomizedExpansionPanels(props) {
             <Powders/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+      <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel2d-content" id="panel2d-header">
           CLAYS
         </ExpansionPanelSummary>
@@ -75,7 +75,7 @@ export default function CustomizedExpansionPanels(props) {
           <Clays/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+      <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel3d-content" id="panel3d-header">
           EXFOLIANTS
         </ExpansionPanelSummary>
@@ -83,7 +83,7 @@ export default function CustomizedExpansionPanels(props) {
           <Exfoliants/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+      <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel4d-content" id="panel4d-header">
           PLANT EXTRACTS
         </ExpansionPanelSummary>

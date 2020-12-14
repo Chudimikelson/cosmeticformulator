@@ -61,7 +61,7 @@ export default class Checkout extends Component {
                 
      <React.Fragment>
        <Spaces>
-         <section className="cert-header paddit">
+         <section className="mainGreen paddit">
                     <div className="container ">
                       <div className="col-md-10">
                         <h3 className="text-contrast regular">Your Cart</h3>
@@ -69,11 +69,11 @@ export default class Checkout extends Component {
                         <p className="mb-0 text-light">Please fill your Shipping Details and proceed to Payment</p>
                       </div>
                     </div>
-                <div className="container py-0">
+                <div className="container py-0 bbn">
                     <nav aria-label="breadcrumb">
-                        <ol className="breadcrumb small no-decor-links">
-                            <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                            <li className="breadcrumb-item"><Link to="/OILS-and-BUTTERS">Continue Shopping</Link></li>
+                        <ol className="breadcrumb small ">
+                            <li className="breadcrumb-item"><Link className="no-decor-links text-contrast" to="/">Home</Link></li>
+                            <li className="breadcrumb-item"><Link className="text-contrast" to="/OILS-and-BUTTERS">Continue Shopping</Link></li>
                             <li className="breadcrumb-item active" aria-current="page">Cart</li>
                         </ol>
                     </nav>

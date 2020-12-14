@@ -60,7 +60,7 @@ export default function CustomizedExpansionPanels(props) {
   
   return (
     <div>
-      <ExpansionPanel round expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel1d-content" id="panel1d-header">
           SURFACTANTS
         </ExpansionPanelSummary>
@@ -68,7 +68,7 @@ export default function CustomizedExpansionPanels(props) {
             <Surfactants/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+      <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel2d-content" id="panel2d-header">
           HYDROSOLS
         </ExpansionPanelSummary>
@@ -76,7 +76,7 @@ export default function CustomizedExpansionPanels(props) {
           <Hydrosols/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+      <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel3d-content" id="panel3d-header">
           SOLUBILIZERS
         </ExpansionPanelSummary>
@@ -84,7 +84,7 @@ export default function CustomizedExpansionPanels(props) {
           <Solubilizers/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+      <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel4d-content" id="panel4d-header">
           HUMECTANTS
         </ExpansionPanelSummary>
@@ -92,7 +92,7 @@ export default function CustomizedExpansionPanels(props) {
           <Humectants/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+      <ExpansionPanel expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel5d-content" id="panel5d-header">
           PH ADJUSTERS
         </ExpansionPanelSummary>

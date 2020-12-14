@@ -19,17 +19,17 @@ import React, { Component } from "react";
         <div>
         <MDBNav className="nav-tabs">
           <MDBNavItem>
-            <MDBNavLink className="font-regular" link to="#" active={this.state.activeItem === "1"} onClick={this.toggle("1")} role="tab" >
+            <MDBNavLink className="font-regular" active={this.state.activeItem === "1"} onClick={this.toggle("1")} role="tab" >
               Details
             </MDBNavLink>
           </MDBNavItem>
           <MDBNavItem>
-            <MDBNavLink className="font-regular" link to="#" active={this.state.activeItem === "2"} onClick={this.toggle("2")} role="tab" >
+            <MDBNavLink className="font-regular"  active={this.state.activeItem === "2"} onClick={this.toggle("2")} role="tab" >
               Documents
             </MDBNavLink>
           </MDBNavItem>
           <MDBNavItem>
-            <MDBNavLink className="font-regular" link to="#" active={this.state.activeItem === "3"} onClick={this.toggle("3")} role="tab" >
+            <MDBNavLink className="font-regular" active={this.state.activeItem === "3"} onClick={this.toggle("3")} role="tab" >
               Reviews
             </MDBNavLink>
           </MDBNavItem>

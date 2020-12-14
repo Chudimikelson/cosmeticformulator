@@ -3,10 +3,10 @@ import { withStyles } from '@material-ui/core/styles';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import Actives from './CosmeList';
-import Preservatives from './CosmeList';
+import Actives from './ActivList';
+import Preservatives from './PresvList';
 import Cosmeceuticals from './CosmeList';
-import Additives from './CosmeList';
+import Additives from './AddiList';
 
 
 const ExpansionPanel = withStyles({
@@ -59,7 +59,7 @@ export default function CustomizedExpansionPanels(props) {
   
   return (
     <div>
-      <ExpansionPanel round expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel1d-content" id="panel1d-header">
           ACTIVES
         </ExpansionPanelSummary>
@@ -67,7 +67,7 @@ export default function CustomizedExpansionPanels(props) {
             <Actives/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+      <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel2d-content" id="panel2d-header">
           PRESERVATIVES
         </ExpansionPanelSummary>
@@ -75,7 +75,7 @@ export default function CustomizedExpansionPanels(props) {
           <Preservatives/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+      <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel3d-content" id="panel3d-header">
           COSMECEUTICALS
         </ExpansionPanelSummary>
@@ -83,7 +83,7 @@ export default function CustomizedExpansionPanels(props) {
           <Cosmeceuticals/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel round expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+      <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <ExpansionPanelSummary className="lead footer-panels" aria-controls="panel4d-content" id="panel4d-header">
           OTHER ADDITIVES
         </ExpansionPanelSummary>

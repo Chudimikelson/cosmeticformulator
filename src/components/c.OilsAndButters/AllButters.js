@@ -14,7 +14,7 @@ export default class AllButters extends Component {
       <>
       <ProductConsumer>
         {(value)=>{
-          const {id,usage,description,img, contains,count, title,inCart, mini, regular, large} = value.detailProduct;
+          const {id,usage,description,img, contains, title,inCart, mini, regular, large} = value.detailProduct;
           return (
             <div className="container-fluid">
             <div className="bbn"><SuperMenu/></div>
@@ -55,7 +55,7 @@ export default class AllButters extends Component {
       </div>
       <div className="card-body w-70 rounded border">
         <div className="d-flex justify-content-between align-items-sm-center">
-          <div className=""> <label className="control-label text-darker" for="more">4 litres or more</label></div>
+          <div className=""> <label className="control-label text-darker" htmlFor="more">4 litres or more</label></div>
           <div className="ml-sm-auto"><span className="font-sm text-primary">Contact us for bulk orders</span></div>
         </div>
       </div>
@@ -110,15 +110,4 @@ export default class AllButters extends Component {
     )
   }
 }
-AllButters.propTypes = {
-  product: PropTypes.shape({
-    id: PropTypes.number,
-    img: PropTypes.string,
-    title: PropTypes.string,
-    price: PropTypes.number,
-    mini: PropTypes.number,
-    regular: PropTypes.number,
-    regular: PropTypes.number,
-    inCart: PropTypes.bool
-  }).isRequired
-};
+
