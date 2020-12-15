@@ -3,7 +3,6 @@ import {Switch, Route} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
-import Details from './components/Details';
 import Checkout from './components/checkout/Checkout';
 import Default from './components/Default';
 import Modal from './components/Modal';
@@ -16,6 +15,8 @@ import EmulStabilizers from './components/c.Emulsifiers/EmulStabilizers';
 import PowdersExtracts from './components/c.PowdersExtracts/PowdersExtracts';
 import ActivesPreservatives from './components/c.ActivesPreservatives/ActivesPreservatives';
 import OilsCategory from './components/AllOils';
+import ActivsCategory from './components/AllActivs';
+import PreservsCategory from './components/AllPreservs';
 
 class App extends Component {
   render() {
@@ -35,7 +36,8 @@ class App extends Component {
           <Route path="/POWDERS-and-EXTRACTS" component={PowdersExtracts}/>
           <Route path="/ACTIVES-and-PRESERVATIVES" component={ActivesPreservatives}/>
           <Route path="/OILS-CATEGORY" component={OilsCategory}/>
-          <Route path="/details" component={Details} />
+          <Route path="/ACTIVES" component={ActivsCategory}/>
+          <Route path="/PRESERVATIVES" component={PreservsCategory}/>
           <Route path="/checkout" component={Checkout} />
           <Route component={Default} />
         </Switch>

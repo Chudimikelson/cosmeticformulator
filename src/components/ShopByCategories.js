@@ -17,11 +17,11 @@ export default function ShopByCategories() {
             
           </div> </Link> 
         </div>
-        <div className="col-md-4 col-12"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic3} /><Link to="/ACTIVES-and-PRESERVATIVES">
+        <div className="col-md-4 col-12"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic3} /><Link to="/ACTIVES">
           <div className="finess mx-auto"><button className="py-1 text-capitalize">Actives</button>
           </div></Link>
         </div>
-        <div className="col-md-4 col-12"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic1} /><Link to="/ACTIVES-and-PRESERVATIVES">
+        <div className="col-md-4 col-12"><img className="img-fluid card shadow" alt="Natural Lightening and skin brightening lotions and creams for kids" style={{height:250}}  src={catPic1} /><Link to="/PRESERVATIVES">
           <div className="finess mx-auto"><button className="py-1 text-capitalize">Preservatives</button>
           </div></Link>
         </div>
