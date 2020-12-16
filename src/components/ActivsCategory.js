@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../Context";
-import SuperMenu from './SuperMenu';
 
 export default class ActivsCategory extends Component {
   render() {
     const { id, title, img, mini} = this.props.activsCategory;
     return (
-      <>
-      <SuperMenu/>
       <ProductConsumer>
         {value => (
           <div className="col-6 col-md-3 d-flex" onClick={()=> value.handleDetail (id)}>
@@ -19,7 +16,6 @@ export default class ActivsCategory extends Component {
           </div>
         )}
       </ProductConsumer>
-      </>
     );
   }
 }

@@ -25,7 +25,9 @@ body{
 .mainGreen {
   background-image: radial-gradient(circle, #56ab2f, #008000, #008000 );
 }
-
+.transparent {
+  opacity: 0.7;
+}
 .breadcrumb {
   background-image: linear-gradient( to right, #5bec7f, #76ec40, #008000 )!important;
 }

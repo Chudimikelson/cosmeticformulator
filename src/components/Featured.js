@@ -14,32 +14,32 @@ export default function Featured() {
           <div className="swiper-wrapper d-flex justify-content-center flex-wrap">
           <div className="swiper-slide col-12 col-md-2 card shadow mx-2">
               <div className="card-body d-flex flex-wrap flex-md-wrap">
-                <div className="col-6"><img src={lavenderbud} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Lavender Buds<p>Starting at $2.50</p></div>
-              <button className="btn btn-primary text-center col-12">Buy</button>
+                <div className="col-6"><img src={lavenderbud} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Lavender Buds<p>N500 per 100g</p></div>
+              <button className="btn btn-success text-center col-12">Buy</button>
               </div>
             </div>
             <div className="swiper-slide col-12 col-md-2 card shadow mx-2">
               <div className="card-body d-flex flex-wrap flex-md-wrap">
-                <div className="col-6"><img src={essOil} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Essential Oil <p>Starting at $3</p></div>
-              <button className="btn btn-primary text-center col-12">Buy</button>
+                <div className="col-6"><img src={essOil} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Essential Oil <p>N500 per 100g</p></div>
+              <button className="btn btn-success text-center col-12">Buy</button>
               </div>
             </div>
             <div className="swiper-slide col-12 col-md-2 card shadow mx-2">
               <div className="card-body d-flex flex-wrap flex-md-wrap">
-                <div className="col-6"><img src={butterMilk} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Buttermilk Powder<p>Starting at $5</p></div>
-              <button className="btn btn-primary text-center col-12">Buy</button>
+                <div className="col-6"><img src={butterMilk} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Buttermilk Powder<p>N500 per 100g</p></div>
+              <button className="btn btn-success text-center col-12">Buy</button>
               </div>
             </div>
             <div className="swiper-slide col-12 col-md-2 card shadow mx-2">
               <div className="card-body d-flex flex-wrap flex-md-wrap">
-                <div className="col-6"><img src={oliveOil} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Olive Oil <p>Starting at $3</p></div>
-              <button className="btn btn-primary text-center col-12">Buy</button>
+                <div className="col-6"><img src={oliveOil} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Olive Oil <p>N500 per 100g</p></div>
+              <button className="btn btn-success text-center col-12">Buy</button>
               </div>
             </div>
             <div className="swiper-slide col-12 col-md-2 card shadow mx-2">
               <div className="card-body d-flex flex-wrap flex-md-wrap">
-                <div className="col-6"><img src={essOil} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Green Tea<p>Starting at $3</p></div>
-              <button className="btn btn-primary text-center col-12">Buy</button>
+                <div className="col-6"><img src={essOil} alt=""/></div><div className="my-auto text-center col-6 col-md-12">Green Tea<p>N500 per 100g</p></div>
+              <button className="btn btn-success text-center col-12">Buy</button>
               </div>
             </div>
           </div>

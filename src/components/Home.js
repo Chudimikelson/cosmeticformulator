@@ -4,6 +4,7 @@ import Banner from './Banner';
 import Featured from './Featured';
 import Testimonials from './Testimonials';
 import SuperMenu from './SuperMenu';
+import ReviewsCarousel from './ReviewsCarousel';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
           <Banner />
           <ShopByCategories/>         
           <Featured/>
-          <Testimonials/>
+          <div className="bbn"><ReviewsCarousel/></div>
       </React.Fragment> 
   )
 }
