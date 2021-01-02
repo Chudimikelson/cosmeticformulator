@@ -4,6 +4,7 @@ import logo from '../cfd.png';
 import styled from 'styled-components';
 import Sidebar from './Sidebar';
 import { MDBNavbar,  MDBNavLink, MDBIcon, MDBCol } from "mdbreact";
+import Searchbar from '../components/Searchbar/Searchbar';
 
 export default class Navbar extends Component {
   render() {
@@ -35,14 +36,7 @@ export default class Navbar extends Component {
               <img src={logo} alt="cosmetic formulator"/></NavLink>
               </MDBCol>
               <MDBCol md="4" className="my-auto">
-                <div className="input-group md-form form-sm form-1">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text" id="basic-text1">
-                      <MDBIcon className="text-white" icon="search" />
-                    </span>
-                  </div>
-                  <input className="form-control" type="text" placeholder="e.g. Kojic" aria-label="Search" />
-                </div>
+                <Searchbar/>
               </MDBCol>
               <MDBNavbar className="text-right">
                 <MDBNavLink to="/checkout">
