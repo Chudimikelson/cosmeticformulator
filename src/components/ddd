@@ -1,30 +1,4 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import { ProductConsumer } from '../Context'
-import { ButtonContainer } from './Button'
-import { Link } from 'react-router-dom'
-import { MDBIcon } from 'mdbreact'
-import SearchResults from './SearchResults'
-
-export default class Modal extends Component {
-  render() {
-    return (
-      <ProductConsumer>
-        {(value) => {
-          const {
-            modalOpen,
-            closeModal,
-            dynamicSearch,
-            empty,
-            searchTerm,
-            editSearchTerm,
-          } = value
-
-          if (!modalOpen) {
-            return null
-          } else {
-            return (
-              <ModalContainer>
+<ModalContainer>
                 <div className='container'>
                   <div className='input-group md-form form-sm form-1'>
                     <input
@@ -49,32 +23,19 @@ export default class Modal extends Component {
                     ) : (
                       <div className=''>empty string</div>
                     )}
-                    <SearchResults />
+                    {(value) => {
+                      return value.products
+                        .filter((product) => {
+                          return product.category === 'BUTTERS'
+                        })
+                        .map((product) => {
+                          return <Name key={product.id} name={product} />
+                        })
+                    }}
                     <ButtonContainer onClick={() => closeModal()}>
                       Close
                     </ButtonContainer>
                   </div>
                 </div>
               </ModalContainer>
-            )
-          }
-        }}
-      </ProductConsumer>
-    )
-  }
-}
-
-const ModalContainer = styled.div`
-  position: fixed;
-  top: 5vh;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  #modal {
-    background: var(--mainWhite);
-  }
-`
+            

@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class Name extends Component {
   render() {
-    return (
-      <div>
-        {this.props.name}
-      </div>
-    )
+    return <div>{this.props.name.title}</div>
   }
 }
